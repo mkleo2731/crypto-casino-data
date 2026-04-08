@@ -1,0 +1,244 @@
+[
+  {
+    "platform_id": "stake",
+    "platform_name": "Stake",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "BCH",
+      "XRP",
+      "TRX",
+      "EOS",
+      "USDT",
+      "USDC"
+    ],
+    "count": 10
+  },
+  {
+    "platform_id": "bcgame",
+    "platform_name": "BC.Game",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "BCH",
+      "XRP",
+      "TRX",
+      "BNB",
+      "USDT",
+      "SOL"
+    ],
+    "count": 10
+  },
+  {
+    "platform_id": "cloudbet",
+    "platform_name": "Cloudbet",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "BCH",
+      "USDT",
+      "USDC",
+      "DAI",
+      "LINK",
+      "DOGE",
+      "PAX"
+    ],
+    "count": 10
+  },
+  {
+    "platform_id": "bitcasino",
+    "platform_name": "Bitcasino",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "TRX",
+      "USDT",
+      "ADA",
+      "DOGE",
+      "BNB"
+    ],
+    "count": 8
+  },
+  {
+    "platform_id": "mbitcasino",
+    "platform_name": "mBit Casino",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "BCH",
+      "USDT",
+      "XRP"
+    ],
+    "count": 7
+  },
+  {
+    "platform_id": "roobet",
+    "platform_name": "Roobet",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "USDC"
+    ],
+    "count": 5
+  },
+  {
+    "platform_id": "duelbits",
+    "platform_name": "Duelbits",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "SOL",
+      "TRX"
+    ],
+    "count": 6
+  },
+  {
+    "platform_id": "rollbit",
+    "platform_name": "Rollbit",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "SOL",
+      "USDT"
+    ],
+    "count": 5
+  },
+  {
+    "platform_id": "metaspins",
+    "platform_name": "Metaspins",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BNB"
+    ],
+    "count": 6
+  },
+  {
+    "platform_id": "vave",
+    "platform_name": "Vave",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "TRX",
+      "BNB",
+      "XRP"
+    ],
+    "count": 8
+  },
+  {
+    "platform_id": "betsio",
+    "platform_name": "Bets.io",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BCH",
+      "XRP"
+    ],
+    "count": 7
+  },
+  {
+    "platform_id": "fairspin",
+    "platform_name": "Fairspin",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "TRX",
+      "BNB"
+    ],
+    "count": 6
+  },
+  {
+    "platform_id": "fortunejack",
+    "platform_name": "FortuneJack",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "USDT",
+      "TRX",
+      "XMR",
+      "DASH"
+    ],
+    "count": 8
+  },
+  {
+    "platform_id": "trustdice",
+    "platform_name": "TrustDice",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "EOS",
+      "USDT",
+      "TRX",
+      "DOGE"
+    ],
+    "count": 6
+  },
+  {
+    "platform_id": "wildio",
+    "platform_name": "Wild.io",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BNB",
+      "TRX"
+    ],
+    "count": 7
+  },
+  {
+    "platform_id": "winzio",
+    "platform_name": "Winz.io",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BCH",
+      "XRP",
+      "TRX"
+    ],
+    "count": 8
+  },
+  {
+    "platform_id": "cryptoleo",
+    "platform_name": "CryptoLeo",
+    "cryptocurrencies": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "TRX"
+    ],
+    "count": 6
+  }
+]

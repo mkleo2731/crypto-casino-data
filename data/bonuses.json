@@ -1,0 +1,155 @@
+[
+  {
+    "platform_id": "stake",
+    "platform_name": "Stake",
+    "bonus_type": "rakeback",
+    "bonus_amount": "Up to 10% rakeback",
+    "wagering_requirement": 0,
+    "description": "Ongoing rakeback program with increasing percentages based on VIP level",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "bcgame",
+    "platform_name": "BC.Game",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 360% on first 4 deposits",
+    "wagering_requirement": 40,
+    "description": "Welcome bonus spread across first four deposits with 40x wagering",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "cloudbet",
+    "platform_name": "Cloudbet",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "100% up to 5 BTC",
+    "wagering_requirement": 1,
+    "description": "Welcome bonus with playthrough points system - earn points by playing to release bonus funds",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "bitcasino",
+    "platform_name": "Bitcasino",
+    "bonus_type": "cashback",
+    "bonus_amount": "Up to 20% cashback",
+    "wagering_requirement": 0,
+    "description": "Loyalty club with tiered cashback rewards and exclusive bonuses",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "mbitcasino",
+    "platform_name": "mBit Casino",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 5 BTC across first 3 deposits",
+    "wagering_requirement": 35,
+    "description": "Tiered welcome package: 175% first deposit, 100% second, 75% third",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "roobet",
+    "platform_name": "Roobet",
+    "bonus_type": "rakeback",
+    "bonus_amount": "Instant rakeback rewards",
+    "wagering_requirement": 0,
+    "description": "Ongoing rakeback and rewards through the Roobet loyalty program",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "duelbits",
+    "platform_name": "Duelbits",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 100% first deposit bonus",
+    "wagering_requirement": 30,
+    "description": "Welcome bonus on first deposit with 30x wagering requirement",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "rollbit",
+    "platform_name": "Rollbit",
+    "bonus_type": "rakeback",
+    "bonus_amount": "Up to 5% rakeback",
+    "wagering_requirement": 0,
+    "description": "Tiered rakeback system based on wagering volume",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "metaspins",
+    "platform_name": "Metaspins",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 1 BTC welcome bonus",
+    "wagering_requirement": 40,
+    "description": "First deposit match bonus with 40x wagering requirement",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "vave",
+    "platform_name": "Vave",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "100% up to 1 BTC + 50 free spins",
+    "wagering_requirement": 40,
+    "description": "Welcome package spread across first deposit with free spins bonus",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "betsio",
+    "platform_name": "Bets.io",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 1 BTC + 100 free spins",
+    "wagering_requirement": 40,
+    "description": "Welcome bonus on first deposit with free spins and wagering requirement",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "fairspin",
+    "platform_name": "Fairspin",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 450% on first deposits + 140 free spins",
+    "wagering_requirement": 25,
+    "description": "Multi-tier welcome package across first four deposits",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "fortunejack",
+    "platform_name": "FortuneJack",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 6 BTC + 250 free spins",
+    "wagering_requirement": 30,
+    "description": "Welcome package spread across first four deposits with free spins",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "trustdice",
+    "platform_name": "TrustDice",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 3 BTC + 25 free spins",
+    "wagering_requirement": 35,
+    "description": "Welcome bonus on first three deposits plus daily satoshi faucet",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "wildio",
+    "platform_name": "Wild.io",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 10 ETH across first 4 deposits",
+    "wagering_requirement": 40,
+    "description": "Multi-tier welcome package with increasing match percentages",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "winzio",
+    "platform_name": "Winz.io",
+    "bonus_type": "free_spins",
+    "bonus_amount": "Up to 300 free spins no wagering",
+    "wagering_requirement": 0,
+    "description": "Welcome free spins with no wagering requirements - keep what you win",
+    "last_verified": "2026-04-01"
+  },
+  {
+    "platform_id": "cryptoleo",
+    "platform_name": "CryptoLeo",
+    "bonus_type": "deposit_match",
+    "bonus_amount": "Up to 150% first deposit bonus",
+    "wagering_requirement": 35,
+    "description": "Welcome bonus on first deposit with 35x wagering requirement",
+    "last_verified": "2026-04-01"
+  }
+]

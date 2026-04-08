@@ -1,0 +1,31 @@
+{
+  "name": "crypto-casino-data",
+  "version": "1.0.0",
+  "description": "Open dataset of cryptocurrency casino and sportsbook platforms — ratings, features, bonuses, supported cryptos, and country availability",
+  "main": "data/platforms.json",
+  "scripts": {
+    "validate": "node scripts/validate.js"
+  },
+  "keywords": [
+    "crypto",
+    "casino",
+    "gambling",
+    "bitcoin",
+    "cryptocurrency",
+    "dataset",
+    "open-data"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicheflow/crypto-casino-data"
+  },
+  "license": "MIT",
+  "files": [
+    "data/",
+    "schema/",
+    "scripts/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
+}

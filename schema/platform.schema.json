@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nicheflow/crypto-casino-data/schema/platform.schema.json",
+  "title": "Crypto Casino Platform",
+  "description": "Schema for a cryptocurrency casino/sportsbook platform entry",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "url",
+    "founded_year",
+    "license",
+    "rating",
+    "description",
+    "categories",
+    "supported_cryptos",
+    "features",
+    "min_deposit",
+    "withdrawal_speed"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier (lowercase, hyphenated)"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display name of the platform"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Platform homepage URL"
+    },
+    "founded_year": {
+      "type": "integer",
+      "minimum": 2010,
+      "maximum": 2030,
+      "description": "Year the platform was established"
+    },
+    "license": {
+      "type": "string",
+      "description": "Licensing jurisdiction (e.g., Curacao, Malta)"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Overall rating on a 0-10 scale"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Brief description of the platform"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "casino",
+          "sports",
+          "esports",
+          "originals",
+          "live",
+          "slots",
+          "table-games",
+          "dice",
+          "lottery",
+          "nft"
+        ]
+      },
+      "minItems": 1,
+      "description": "Types of gambling offered"
+    },
+    "supported_cryptos": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z0-9]+$"
+      },
+      "minItems": 1,
+      "description": "Supported cryptocurrency ticker symbols"
+    },
+    "features": {
+      "type": "object",
+      "required": [
+        "provably_fair",
+        "kyc_required",
+        "vpn_friendly",
+        "live_dealer",
+        "mobile_app"
+      ],
+      "properties": {
+        "provably_fair": {
+          "type": "boolean",
+          "description": "Supports provably fair game verification"
+        },
+        "kyc_required": {
+          "type": "boolean",
+          "description": "Requires KYC identity verification"
+        },
+        "vpn_friendly": {
+          "type": "boolean",
+          "description": "Allows access via VPN"
+        },
+        "live_dealer": {
+          "type": "boolean",
+          "description": "Offers live dealer games"
+        },
+        "mobile_app": {
+          "type": "boolean",
+          "description": "Has a dedicated mobile app"
+        }
+      },
+      "additionalProperties": false
+    },
+    "min_deposit": {
+      "type": "string",
+      "description": "Minimum deposit amount (e.g., '0.0001 BTC')"
+    },
+    "withdrawal_speed": {
+      "type": "string",
+      "description": "Typical withdrawal processing time"
+    },
+    "pros": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Notable advantages"
+    },
+    "cons": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Notable disadvantages"
+    }
+  },
+  "additionalProperties": false
+}

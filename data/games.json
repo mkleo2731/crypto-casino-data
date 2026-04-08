@@ -1,0 +1,160 @@
+[
+  {
+    "id": "slots",
+    "name": "Slots",
+    "available_on": [
+      "bcgame",
+      "betsio",
+      "bitcasino",
+      "cloudbet",
+      "cryptoleo",
+      "duelbits",
+      "fairspin",
+      "fortunejack",
+      "mbitcasino",
+      "metaspins",
+      "rollbit",
+      "roobet",
+      "stake",
+      "trustdice",
+      "vave",
+      "wildio",
+      "winzio"
+    ],
+    "platform_count": 17
+  },
+  {
+    "id": "blackjack",
+    "name": "Blackjack",
+    "available_on": [
+      "bcgame",
+      "betsio",
+      "bitcasino",
+      "cloudbet",
+      "cryptoleo",
+      "duelbits",
+      "fairspin",
+      "fortunejack",
+      "mbitcasino",
+      "metaspins",
+      "rollbit",
+      "roobet",
+      "stake",
+      "trustdice",
+      "vave",
+      "wildio",
+      "winzio"
+    ],
+    "platform_count": 17
+  },
+  {
+    "id": "roulette",
+    "name": "Roulette",
+    "available_on": [
+      "bcgame",
+      "betsio",
+      "bitcasino",
+      "cloudbet",
+      "cryptoleo",
+      "duelbits",
+      "fairspin",
+      "fortunejack",
+      "mbitcasino",
+      "metaspins",
+      "rollbit",
+      "roobet",
+      "stake",
+      "trustdice",
+      "vave",
+      "wildio",
+      "winzio"
+    ],
+    "platform_count": 17
+  },
+  {
+    "id": "poker",
+    "name": "Poker",
+    "available_on": [
+      "bcgame",
+      "betsio",
+      "bitcasino",
+      "cloudbet",
+      "cryptoleo",
+      "duelbits",
+      "fairspin",
+      "fortunejack",
+      "mbitcasino",
+      "metaspins",
+      "rollbit",
+      "roobet",
+      "stake",
+      "trustdice",
+      "vave",
+      "wildio",
+      "winzio"
+    ],
+    "platform_count": 17
+  },
+  {
+    "id": "dice",
+    "name": "Dice",
+    "available_on": [
+      "bcgame",
+      "duelbits",
+      "fairspin",
+      "fortunejack",
+      "rollbit",
+      "roobet",
+      "stake",
+      "trustdice"
+    ],
+    "platform_count": 8
+  },
+  {
+    "id": "sports-betting",
+    "name": "Sports Betting",
+    "available_on": [
+      "bcgame",
+      "betsio",
+      "cloudbet",
+      "duelbits",
+      "fortunejack",
+      "rollbit",
+      "stake",
+      "trustdice",
+      "vave"
+    ],
+    "platform_count": 9
+  },
+  {
+    "id": "live-dealer",
+    "name": "Live Dealer",
+    "available_on": [
+      "betsio",
+      "bitcasino",
+      "cloudbet",
+      "cryptoleo",
+      "fairspin",
+      "fortunejack",
+      "mbitcasino",
+      "vave",
+      "wildio",
+      "winzio"
+    ],
+    "platform_count": 10
+  },
+  {
+    "id": "crash-games",
+    "name": "Crash Games",
+    "available_on": [
+      "bcgame",
+      "duelbits",
+      "fairspin",
+      "rollbit",
+      "roobet",
+      "stake",
+      "trustdice"
+    ],
+    "platform_count": 7
+  }
+]

@@ -1,0 +1,767 @@
+[
+  {
+    "id": "stake",
+    "name": "Stake",
+    "url": "https://stake.com/",
+    "founded_year": 2017,
+    "license": "Curacao",
+    "rating": 9.5,
+    "description": "Stake is a leading crypto casino and sportsbook, known for its provably fair games and extensive sports betting options.",
+    "categories": [
+      "casino",
+      "sports",
+      "esports",
+      "originals"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "BCH",
+      "XRP",
+      "TRX",
+      "EOS",
+      "USDT",
+      "USDC"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": false,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "Provably fair games",
+      "Huge game library",
+      "Fast withdrawals",
+      "Active community",
+      "VIP program"
+    ],
+    "cons": [
+      "Not available in US/UK",
+      "No fiat currency support",
+      "KYC may be required for large withdrawals"
+    ]
+  },
+  {
+    "id": "bcgame",
+    "name": "BC.Game",
+    "url": "https://bc.game/",
+    "founded_year": 2017,
+    "license": "Curacao",
+    "rating": 9,
+    "description": "BC.Game is a community-driven crypto casino offering thousands of games and support for 150+ cryptocurrencies.",
+    "categories": [
+      "casino",
+      "sports",
+      "originals",
+      "lottery"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "BCH",
+      "XRP",
+      "TRX",
+      "BNB",
+      "USDT",
+      "SOL"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": true
+    },
+    "min_deposit": "No minimum",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "150+ cryptocurrencies supported",
+      "Daily free spin",
+      "Community features",
+      "Original games",
+      "Low house edge"
+    ],
+    "cons": [
+      "Interface can be overwhelming",
+      "Limited customer support hours",
+      "Bonus wagering requirements"
+    ]
+  },
+  {
+    "id": "cloudbet",
+    "name": "Cloudbet",
+    "url": "https://cloudbet.com/",
+    "founded_year": 2013,
+    "license": "Curacao",
+    "rating": 8.5,
+    "description": "Cloudbet is a pioneer in crypto gambling, offering premium sports betting and casino gaming since 2013.",
+    "categories": [
+      "casino",
+      "sports",
+      "esports",
+      "live"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "BCH",
+      "USDT",
+      "USDC",
+      "DAI",
+      "LINK",
+      "DOGE",
+      "PAX"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": true,
+      "vpn_friendly": false,
+      "live_dealer": true,
+      "mobile_app": true
+    },
+    "min_deposit": "0.001 BTC",
+    "withdrawal_speed": "Within 24 hours",
+    "pros": [
+      "High betting limits",
+      "Competitive odds",
+      "Long-standing reputation",
+      "Zero-margin sports betting",
+      "E-sports coverage"
+    ],
+    "cons": [
+      "Slower verification process",
+      "Limited promotions",
+      "No provably fair games"
+    ]
+  },
+  {
+    "id": "bitcasino",
+    "name": "Bitcasino",
+    "url": "https://bitcasino.io/",
+    "founded_year": 2014,
+    "license": "Curacao",
+    "rating": 8,
+    "description": "Bitcasino.io is a licensed crypto casino with 5000+ games, instant withdrawals, and a fun loyalty program.",
+    "categories": [
+      "casino",
+      "live",
+      "slots"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "TRX",
+      "USDT",
+      "ADA",
+      "DOGE",
+      "BNB"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": true
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "5000+ games",
+      "Instant withdrawals",
+      "No KYC for crypto",
+      "Fun loyalty program",
+      "Licensed operator"
+    ],
+    "cons": [
+      "Limited sports betting",
+      "No provably fair verification",
+      "Fewer crypto options than competitors"
+    ]
+  },
+  {
+    "id": "mbitcasino",
+    "name": "mBit Casino",
+    "url": "https://mbitcasino.com/",
+    "founded_year": 2014,
+    "license": "Curacao",
+    "rating": 7.5,
+    "description": "mBit Casino offers 7000+ games from top providers, generous bonuses, and a modern crypto gambling experience.",
+    "categories": [
+      "casino",
+      "slots",
+      "live",
+      "table-games"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "BCH",
+      "USDT",
+      "XRP"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0005 BTC",
+    "withdrawal_speed": "Within 10 minutes",
+    "pros": [
+      "7000+ games",
+      "Generous welcome bonus",
+      "Fast registration",
+      "VIP program",
+      "Regular tournaments"
+    ],
+    "cons": [
+      "Higher wagering requirements",
+      "Limited live chat hours",
+      "Fewer supported cryptocurrencies"
+    ]
+  },
+  {
+    "id": "roobet",
+    "name": "Roobet",
+    "url": "https://roobet.com/",
+    "founded_year": 2019,
+    "license": "Curacao",
+    "rating": 8.2,
+    "description": "Roobet is a popular crypto casino known for its sleek interface, original crash games, and engaging community features.",
+    "categories": [
+      "casino",
+      "originals",
+      "slots"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "USDC"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": false,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "Sleek modern interface",
+      "Popular crash games",
+      "Active community",
+      "Fast crypto transactions",
+      "Streaming integration"
+    ],
+    "cons": [
+      "Geo-restricted in many countries",
+      "Limited cryptocurrency options",
+      "No sports betting"
+    ]
+  },
+  {
+    "id": "duelbits",
+    "name": "Duelbits",
+    "url": "https://duelbits.com/",
+    "founded_year": 2020,
+    "license": "Curacao",
+    "rating": 8,
+    "description": "Duelbits is a crypto casino and sportsbook offering provably fair games, competitive odds, and a rewarding VIP program.",
+    "categories": [
+      "casino",
+      "sports",
+      "originals"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "SOL",
+      "TRX"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "Provably fair games",
+      "Sports betting available",
+      "Good VIP program",
+      "Fast payouts",
+      "Modern interface"
+    ],
+    "cons": [
+      "Relatively new platform",
+      "Limited game providers",
+      "Restricted in some countries"
+    ]
+  },
+  {
+    "id": "rollbit",
+    "name": "Rollbit",
+    "url": "https://rollbit.com/",
+    "founded_year": 2020,
+    "license": "Curacao",
+    "rating": 7.8,
+    "description": "Rollbit is an innovative crypto casino featuring NFT trading, sports betting, and unique crypto futures alongside traditional casino games.",
+    "categories": [
+      "casino",
+      "sports",
+      "originals",
+      "nft"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "SOL",
+      "USDT"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": false,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "NFT integration",
+      "Crypto futures trading",
+      "Sports betting",
+      "Original games",
+      "Active community"
+    ],
+    "cons": [
+      "Complex interface for beginners",
+      "Regulatory concerns",
+      "Limited customer support"
+    ]
+  },
+  {
+    "id": "metaspins",
+    "name": "Metaspins",
+    "url": "https://metaspins.com/",
+    "founded_year": 2022,
+    "license": "Curacao",
+    "rating": 7.5,
+    "description": "Metaspins is a crypto-native casino offering a curated selection of slots and table games with instant deposits and withdrawals.",
+    "categories": [
+      "casino",
+      "slots",
+      "table-games"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BNB"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "Clean interface",
+      "Fast transactions",
+      "Good game selection",
+      "Crypto-native design",
+      "No KYC"
+    ],
+    "cons": [
+      "Smaller game library",
+      "New platform",
+      "Limited promotions"
+    ]
+  },
+  {
+    "id": "vave",
+    "name": "Vave",
+    "url": "https://vave.com/",
+    "founded_year": 2022,
+    "license": "Curacao",
+    "rating": 7.9,
+    "description": "Vave is a comprehensive crypto casino and sportsbook offering 5000+ games, generous bonuses, and support for multiple cryptocurrencies.",
+    "categories": [
+      "casino",
+      "sports",
+      "slots",
+      "live"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "TRX",
+      "BNB",
+      "XRP"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Within 10 minutes",
+    "pros": [
+      "5000+ games",
+      "Sports betting",
+      "Generous welcome bonus",
+      "Fast payouts",
+      "Mobile-friendly"
+    ],
+    "cons": [
+      "Newer platform",
+      "Limited VIP program details",
+      "Some geo-restrictions"
+    ]
+  },
+  {
+    "id": "betsio",
+    "name": "Bets.io",
+    "url": "https://bets.io/",
+    "founded_year": 2021,
+    "license": "Curacao",
+    "rating": 7.6,
+    "description": "Bets.io is a crypto-friendly casino offering a wide range of games, sports betting, and attractive bonuses for cryptocurrency players.",
+    "categories": [
+      "casino",
+      "sports",
+      "slots",
+      "live"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BCH",
+      "XRP"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Within 15 minutes",
+    "pros": [
+      "Wide game selection",
+      "Sports betting",
+      "Attractive bonuses",
+      "Multiple crypto support",
+      "User-friendly interface"
+    ],
+    "cons": [
+      "Newer in the market",
+      "Limited live support hours",
+      "Wagering requirements on bonuses"
+    ]
+  },
+  {
+    "id": "fairspin",
+    "name": "Fairspin",
+    "url": "https://fairspin.io/",
+    "founded_year": 2018,
+    "license": "Curacao",
+    "rating": 7.4,
+    "description": "Fairspin is a blockchain-powered casino with transparent gaming, TFS token rewards, and a wide selection of provably fair games.",
+    "categories": [
+      "casino",
+      "slots",
+      "live",
+      "originals"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "TRX",
+      "BNB"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Within 15 minutes",
+    "pros": [
+      "Blockchain transparency",
+      "TFS token rewards",
+      "Provably fair games",
+      "Good game variety",
+      "Unique reward system"
+    ],
+    "cons": [
+      "Complex token system",
+      "Interface learning curve",
+      "Limited sports betting"
+    ]
+  },
+  {
+    "id": "fortunejack",
+    "name": "FortuneJack",
+    "url": "https://fortunejack.com/",
+    "founded_year": 2014,
+    "license": "Curacao",
+    "rating": 8.1,
+    "description": "FortuneJack is a veteran crypto casino established in 2014, offering dice, slots, sports betting, and a provably fair gaming experience.",
+    "categories": [
+      "casino",
+      "sports",
+      "dice",
+      "slots",
+      "live"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "DOGE",
+      "USDT",
+      "TRX",
+      "XMR",
+      "DASH"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.001 BTC",
+    "withdrawal_speed": "Within 1 hour",
+    "pros": [
+      "Established since 2014",
+      "Provably fair games",
+      "Sports betting",
+      "Generous welcome bonus",
+      "Dice and lottery games"
+    ],
+    "cons": [
+      "Dated interface design",
+      "Slower customer support",
+      "Complex bonus terms"
+    ]
+  },
+  {
+    "id": "trustdice",
+    "name": "TrustDice",
+    "url": "https://trustdice.win/",
+    "founded_year": 2018,
+    "license": "Curacao",
+    "rating": 7.7,
+    "description": "TrustDice is a blockchain-based crypto casino offering provably fair games, sports betting, and daily faucet rewards for players.",
+    "categories": [
+      "casino",
+      "sports",
+      "dice",
+      "originals"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "EOS",
+      "USDT",
+      "TRX",
+      "DOGE"
+    ],
+    "features": {
+      "provably_fair": true,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Within 30 minutes",
+    "pros": [
+      "Provably fair on blockchain",
+      "Daily faucet rewards",
+      "Sports betting",
+      "Staking rewards",
+      "Transparent gaming"
+    ],
+    "cons": [
+      "Smaller game library",
+      "Less polished interface",
+      "Limited payment options"
+    ]
+  },
+  {
+    "id": "wildio",
+    "name": "Wild.io",
+    "url": "https://wild.io/",
+    "founded_year": 2022,
+    "license": "Curacao",
+    "rating": 7.5,
+    "description": "Wild.io is a modern crypto casino featuring a massive game library, NFT rewards, and a generous multi-tier welcome bonus.",
+    "categories": [
+      "casino",
+      "slots",
+      "live",
+      "table-games"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BNB",
+      "TRX"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "Massive game library",
+      "NFT rewards",
+      "Generous welcome bonus",
+      "Modern design",
+      "Fast crypto payouts"
+    ],
+    "cons": [
+      "Newer platform",
+      "Limited track record",
+      "No sports betting"
+    ]
+  },
+  {
+    "id": "winzio",
+    "name": "Winz.io",
+    "url": "https://winz.io/",
+    "founded_year": 2021,
+    "license": "Curacao",
+    "rating": 7.8,
+    "description": "Winz.io is a no-wagering crypto casino offering 5000+ games with instant cashout bonuses and no playthrough requirements.",
+    "categories": [
+      "casino",
+      "slots",
+      "live",
+      "table-games"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "BCH",
+      "XRP",
+      "TRX"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "No wagering requirements",
+      "5000+ games",
+      "Instant bonus cashout",
+      "Clean interface",
+      "Good crypto support"
+    ],
+    "cons": [
+      "Limited sports betting",
+      "Fewer promotions",
+      "Smaller community"
+    ]
+  },
+  {
+    "id": "cryptoleo",
+    "name": "CryptoLeo",
+    "url": "https://cryptoleo.com/",
+    "founded_year": 2022,
+    "license": "Curacao",
+    "rating": 7.3,
+    "description": "CryptoLeo is a crypto casino with 3000+ games, instant withdrawals, and a sleek design tailored for cryptocurrency players.",
+    "categories": [
+      "casino",
+      "slots",
+      "live"
+    ],
+    "supported_cryptos": [
+      "BTC",
+      "ETH",
+      "LTC",
+      "USDT",
+      "DOGE",
+      "TRX"
+    ],
+    "features": {
+      "provably_fair": false,
+      "kyc_required": false,
+      "vpn_friendly": true,
+      "live_dealer": true,
+      "mobile_app": false
+    },
+    "min_deposit": "0.0001 BTC",
+    "withdrawal_speed": "Instant",
+    "pros": [
+      "3000+ games",
+      "Instant withdrawals",
+      "Modern design",
+      "No KYC required",
+      "Good mobile experience"
+    ],
+    "cons": [
+      "Newer platform",
+      "Limited bonus offers",
+      "No sports betting"
+    ]
+  }
+]

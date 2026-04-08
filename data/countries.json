@@ -1,0 +1,252 @@
+[
+  {
+    "country_code": "gb",
+    "country_name": "United Kingdom",
+    "legal_status": "regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "bcgame"
+    ],
+    "vpn_note": "VPN usage may violate terms of service with UK-licensed operators."
+  },
+  {
+    "country_code": "de",
+    "country_name": "Germany",
+    "legal_status": "regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "fairspin",
+      "fortunejack"
+    ],
+    "vpn_note": "Using a VPN to access unlicensed gambling sites may violate German gambling laws."
+  },
+  {
+    "country_code": "br",
+    "country_name": "Brazil",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "stake",
+      "bcgame",
+      "roobet",
+      "duelbits",
+      "vave"
+    ],
+    "vpn_note": "VPNs are legal in Brazil and commonly used, though platform terms of service may still apply."
+  },
+  {
+    "country_code": "jp",
+    "country_name": "Japan",
+    "legal_status": "partially_regulated",
+    "recommended_platforms": [
+      "bitcasino",
+      "bcgame",
+      "cloudbet",
+      "stake"
+    ],
+    "vpn_note": "VPNs are legal in Japan, but using them to gamble on unlicensed platforms carries potential legal risk."
+  },
+  {
+    "country_code": "kr",
+    "country_name": "South Korea",
+    "legal_status": "restricted",
+    "recommended_platforms": [
+      "roobet",
+      "duelbits",
+      "metaspins",
+      "rollbit"
+    ],
+    "vpn_note": "VPN usage is legal but accessing gambling sites via VPN violates Korean gambling laws and can carry criminal penalties."
+  },
+  {
+    "country_code": "in",
+    "country_name": "India",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "stake",
+      "bcgame",
+      "bitcasino",
+      "vave",
+      "betsio"
+    ],
+    "vpn_note": "VPNs are legal in India, though some providers must comply with government data retention requirements."
+  },
+  {
+    "country_code": "ng",
+    "country_name": "Nigeria",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "bcgame",
+      "stake",
+      "roobet",
+      "fortunejack",
+      "trustdice"
+    ],
+    "vpn_note": "VPNs are legal and widely used in Nigeria with no restrictions on gambling access."
+  },
+  {
+    "country_code": "ca",
+    "country_name": "Canada",
+    "legal_status": "partially_regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "stake",
+      "bcgame",
+      "fairspin"
+    ],
+    "vpn_note": "VPNs are legal in Canada, but using them to circumvent provincial gambling restrictions may breach operator terms."
+  },
+  {
+    "country_code": "au",
+    "country_name": "Australia",
+    "legal_status": "regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "fortunejack",
+      "fairspin"
+    ],
+    "vpn_note": "Using a VPN to access blocked gambling sites is not illegal for users, but the platforms themselves are unlicensed in Australia."
+  },
+  {
+    "country_code": "tr",
+    "country_name": "Turkey",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "stake",
+      "bcgame",
+      "roobet",
+      "duelbits",
+      "vave"
+    ],
+    "vpn_note": "VPNs are widely used in Turkey to access blocked gambling sites, though online gambling remains officially prohibited."
+  },
+  {
+    "country_code": "mx",
+    "country_name": "Mexico",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "stake",
+      "bcgame",
+      "bitcasino",
+      "vave",
+      "betsio"
+    ],
+    "vpn_note": "VPNs are legal in Mexico and there are no specific restrictions on using them for gambling purposes."
+  },
+  {
+    "country_code": "ar",
+    "country_name": "Argentina",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "stake",
+      "bcgame",
+      "roobet",
+      "trustdice",
+      "winzio"
+    ],
+    "vpn_note": "VPNs are legal in Argentina and commonly used, with no restrictions related to gambling access."
+  },
+  {
+    "country_code": "ph",
+    "country_name": "Philippines",
+    "legal_status": "partially_regulated",
+    "recommended_platforms": [
+      "bcgame",
+      "bitcasino",
+      "cloudbet",
+      "stake"
+    ],
+    "vpn_note": "VPNs are legal in the Philippines, but players should verify platform licensing before depositing."
+  },
+  {
+    "country_code": "id",
+    "country_name": "Indonesia",
+    "legal_status": "restricted",
+    "recommended_platforms": [
+      "roobet",
+      "duelbits",
+      "metaspins",
+      "rollbit",
+      "wildio"
+    ],
+    "vpn_note": "VPNs are commonly used to bypass internet restrictions in Indonesia, though gambling remains strictly illegal."
+  },
+  {
+    "country_code": "th",
+    "country_name": "Thailand",
+    "legal_status": "restricted",
+    "recommended_platforms": [
+      "roobet",
+      "metaspins",
+      "rollbit",
+      "duelbits",
+      "wildio"
+    ],
+    "vpn_note": "VPNs are legal in Thailand but using them to gamble online carries legal risk as gambling remains prohibited."
+  },
+  {
+    "country_code": "vn",
+    "country_name": "Vietnam",
+    "legal_status": "restricted",
+    "recommended_platforms": [
+      "roobet",
+      "duelbits",
+      "rollbit",
+      "metaspins",
+      "cryptoleo"
+    ],
+    "vpn_note": "VPNs are widely used in Vietnam to access restricted content, though online gambling remains officially illegal."
+  },
+  {
+    "country_code": "za",
+    "country_name": "South Africa",
+    "legal_status": "gray_area",
+    "recommended_platforms": [
+      "stake",
+      "bcgame",
+      "cloudbet",
+      "fortunejack",
+      "trustdice"
+    ],
+    "vpn_note": "VPNs are legal in South Africa with no specific restrictions on their use for accessing gambling sites."
+  },
+  {
+    "country_code": "pt",
+    "country_name": "Portugal",
+    "legal_status": "regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "fairspin",
+      "fortunejack"
+    ],
+    "vpn_note": "Using a VPN to access unlicensed gambling platforms may violate Portuguese gambling regulations."
+  },
+  {
+    "country_code": "es",
+    "country_name": "Spain",
+    "legal_status": "regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "fairspin",
+      "fortunejack"
+    ],
+    "vpn_note": "VPN usage to access unlicensed gambling operators may breach Spanish gambling law and operator terms of service."
+  },
+  {
+    "country_code": "fr",
+    "country_name": "France",
+    "legal_status": "regulated",
+    "recommended_platforms": [
+      "cloudbet",
+      "bitcasino",
+      "fairspin",
+      "fortunejack"
+    ],
+    "vpn_note": "Using a VPN to access unauthorized gambling platforms is discouraged and may violate French gambling regulations."
+  }
+]
