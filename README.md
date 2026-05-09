@@ -56,7 +56,7 @@ print(f"Average rating: {avg:.1f}/10")
 
 ```javascript
 const res = await fetch(
-  'https://raw.githubusercontent.com/nicheflow/crypto-casino-data/main/data/platforms.json'
+  'https://raw.githubusercontent.com/mkleo2731/crypto-casino-data/main/data/platforms.json'
 );
 const platforms = await res.json();
 ```
@@ -94,7 +94,13 @@ Checks all data files for structural correctness, required fields, ID uniqueness
 
 Platform data is compiled from public sources: official platform websites, license registries, and community reports. Ratings reflect a composite of game variety, security features, withdrawal speed, crypto support breadth, and user experience.
 
-Live data, full reviews, and country-specific guides are available at [minipi.io](https://minipi.io).
+Live data, full reviews, and country-specific guides:
+
+- [CoinBetPro.com](https://coinbetpro.com) — Global crypto prediction markets & casino reviews
+- [BTCGamblePro.com](https://btcgamblepro.com) — Bitcoin gambling guide for Nigeria
+- [BTCBettingGuide.com](https://btcbettingguide.com) — Crypto betting guide for Brazil
+- [BitcoinBetPro.com](https://bitcoinbetpro.com) — Bitcoin sports betting for India
+- [CryptoSlotsPro.com](https://cryptoslotspro.com) — Crypto slots & casino guide for Vietnam
 
 ## Contributing
 
