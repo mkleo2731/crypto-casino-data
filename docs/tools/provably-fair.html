@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provably Fair Verifier — Verify Crypto Casino Game Results</title>
+  <meta name="description" content="Free provably fair verification tool. Input your server seed, client seed, and nonce to independently verify crypto casino game outcomes using HMAC-SHA256.">
+  <meta property="og:title" content="Provably Fair Verifier — Verify Casino Game Results">
+  <meta property="og:description" content="Independently verify crypto casino game outcomes using cryptographic hash functions. Free, client-side, no data stored.">
+  <meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',card:'#12121a',border:'#1e1e2e',accent:'#7c6aff',accent2:'#5b8def',dim:'#6b7280',green:'#22c55e'}}}}</script>
+  <style>body{background:#0a0a0f;color:#e5e7eb;font-family:system-ui,-apple-system,sans-serif}a{text-decoration:none}input,textarea{background:#0a0a0f;border:1px solid #1e1e2e;border-radius:0.5rem;padding:0.5rem 0.75rem;color:#e5e7eb;font-size:0.875rem;width:100%}input:focus,textarea:focus{outline:none;border-color:rgba(124,106,255,0.5)}.result-hash{word-break:break-all;font-family:ui-monospace,SFMono-Regular,monospace;font-size:0.75rem;line-height:1.5}</style>
+</head>
+<body>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <nav class="flex items-center gap-1.5 text-xs text-dim mb-6">
+      <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Provably Fair Verifier</span>
+    </nav>
+
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-black text-white mb-2">Provably Fair Verifier</h1>
+      <p class="text-sm text-dim max-w-2xl">Verify that a crypto casino game outcome was fair by checking the cryptographic hash. This tool runs entirely in your browser &mdash; no data is sent to any server.</p>
+    </header>
+
+    <!-- How it works -->
+    <section class="rounded-xl border border-accent/20 bg-accent/5 p-5 mb-8">
+      <h2 class="text-sm font-bold text-white mb-2">How Provably Fair Works</h2>
+      <ol class="space-y-1.5 text-xs text-dim leading-relaxed">
+        <li><strong class="text-white">1.</strong> Before each round, the casino commits to a <strong class="text-white">server seed hash</strong> (the hash of the actual server seed).</li>
+        <li><strong class="text-white">2.</strong> You provide or accept a <strong class="text-white">client seed</strong> and the <strong class="text-white">nonce</strong> increments each round.</li>
+        <li><strong class="text-white">3.</strong> The game result is derived from <code class="bg-white/5 px-1 rounded">HMAC-SHA256(serverSeed, clientSeed:nonce)</code>.</li>
+        <li><strong class="text-white">4.</strong> After the round, the casino reveals the server seed. You can verify: <code class="bg-white/5 px-1 rounded">SHA256(serverSeed) === committedHash</code>.</li>
+      </ol>
+    </section>
+
+    <!-- Verification form -->
+    <div class="space-y-6">
+      <!-- Step 1: Verify server seed -->
+      <div class="rounded-xl border border-border bg-card p-5">
+        <h3 class="text-sm font-bold text-white mb-3">Step 1: Verify Server Seed Commitment</h3>
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs text-dim mb-1">Server Seed (revealed after game)</label>
+            <input type="text" id="serverSeed" placeholder="e.g. a1b2c3d4e5f6..." oninput="computeAll()">
+          </div>
+          <div>
+            <label class="block text-xs text-dim mb-1">Server Seed Hash (committed before game)</label>
+            <input type="text" id="serverSeedHash" placeholder="e.g. 9f86d0..." oninput="computeAll()">
+          </div>
+          <div id="hashResult" class="text-xs"></div>
+        </div>
+      </div>
+
+      <!-- Step 2: Compute game result -->
+      <div class="rounded-xl border border-border bg-card p-5">
+        <h3 class="text-sm font-bold text-white mb-3">Step 2: Compute Game Result</h3>
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs text-dim mb-1">Client Seed</label>
+            <input type="text" id="clientSeed" placeholder="e.g. your-client-seed" oninput="computeAll()">
+          </div>
+          <div>
+            <label class="block text-xs text-dim mb-1">Nonce (round number)</label>
+            <input type="number" id="nonce" placeholder="e.g. 0" value="0" min="0" oninput="computeAll()">
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="rounded-xl border border-border bg-card p-5">
+        <h3 class="text-sm font-bold text-white mb-3">Results</h3>
+        <div class="space-y-3">
+          <div>
+            <span class="text-xs text-dim block mb-1">SHA-256 of Server Seed</span>
+            <div id="computedHash" class="result-hash text-accent bg-white/5 rounded-lg p-2.5">Enter server seed above</div>
+          </div>
+          <div>
+            <span class="text-xs text-dim block mb-1">HMAC-SHA256 Result</span>
+            <div id="hmacResult" class="result-hash text-white bg-white/5 rounded-lg p-2.5">Enter all fields above</div>
+          </div>
+          <div>
+            <span class="text-xs text-dim block mb-1">Derived Game Value (first 8 hex chars as float)</span>
+            <div id="gameValue" class="text-lg font-bold text-green bg-white/5 rounded-lg p-2.5">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resources -->
+    <section class="mt-10">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-dim mb-3">Resources</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <a href="https://btcgamblepro.com/en/insights" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 hover:bg-card transition-all">
+          <span class="text-lg">📚</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Crypto Betting Guides</span>
+            <span class="text-[11px] text-dim">Strategies and analysis for crypto bettors</span>
+          </div>
+        </a>
+        <a href="https://coinbetpro.com/en/insights" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 hover:bg-card transition-all">
+          <span class="text-lg">📊</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Prediction Market Insights</span>
+            <span class="text-[11px] text-dim">Data-driven analysis on prediction markets</span>
+          </div>
+        </a>
+        <a href="https://bitcoinbetpro.com/en/insights" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 hover:bg-card transition-all">
+          <span class="text-lg">🇮🇳</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">India Crypto Betting Guides</span>
+            <span class="text-[11px] text-dim">IPL, cricket, and Indian market analysis</span>
+          </div>
+        </a>
+        <a href="https://btcbettingguide.com/pt/insights" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 hover:bg-card transition-all">
+          <span class="text-lg">🇧🇷</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Guias de Apostas Crypto</span>
+            <span class="text-[11px] text-dim">Analise e estrategias para o mercado brasileiro</span>
+          </div>
+        </a>
+        <a href="https://cryptoslotspro.com/vi/insights" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 hover:bg-card transition-all">
+          <span class="text-lg">🇻🇳</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Huong Dan Ca Cuoc Crypto</span>
+            <span class="text-[11px] text-dim">Phan tich va chien luoc cho thi truong Viet Nam</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="mt-10 pt-6 border-t border-border">
+      <p class="text-xs text-dim">All computations run in your browser using the Web Crypto API. No seeds or data are transmitted. <a href="index.html" class="text-accent hover:underline">Back to all tools</a></p>
+    </footer>
+  </div>
+
+  <script>
+    async function sha256(message) {
+      const data = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function hmacSha256(key, message) {
+      const enc = new TextEncoder();
+      const cryptoKey = await crypto.subtle.importKey('raw', enc.encode(key), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+      const sig = await crypto.subtle.sign('HMAC', cryptoKey, enc.encode(message));
+      return Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function computeAll() {
+      const serverSeed = document.getElementById('serverSeed').value.trim();
+      const serverSeedHash = document.getElementById('serverSeedHash').value.trim();
+      const clientSeed = document.getElementById('clientSeed').value.trim();
+      const nonce = document.getElementById('nonce').value.trim();
+
+      if (serverSeed) {
+        const hash = await sha256(serverSeed);
+        document.getElementById('computedHash').textContent = hash;
+
+        if (serverSeedHash) {
+          const match = hash.toLowerCase() === serverSeedHash.toLowerCase();
+          document.getElementById('hashResult').innerHTML = match
+            ? '<span class="text-green font-semibold">&#10003; Server seed hash matches! The commitment is valid.</span>'
+            : '<span class="text-red-400 font-semibold">&#10007; Hash does NOT match. The server seed may have been changed.</span>';
+        } else {
+          document.getElementById('hashResult').innerHTML = '';
+        }
+      } else {
+        document.getElementById('computedHash').textContent = 'Enter server seed above';
+        document.getElementById('hashResult').innerHTML = '';
+      }
+
+      if (serverSeed && clientSeed) {
+        const hmac = await hmacSha256(serverSeed, clientSeed + ':' + (nonce || '0'));
+        document.getElementById('hmacResult').textContent = hmac;
+        const val = parseInt(hmac.substring(0, 8), 16);
+        const normalized = (val / 0xFFFFFFFF * 100).toFixed(4);
+        document.getElementById('gameValue').textContent = normalized + '%';
+      } else {
+        document.getElementById('hmacResult').textContent = 'Enter all fields above';
+        document.getElementById('gameValue').textContent = '-';
+      }
+    }
+  </script>
+</body>
+</html>
