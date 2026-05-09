@@ -102,6 +102,11 @@ Live data, full reviews, and country-specific guides:
 - [BitcoinBetPro.com](https://bitcoinbetpro.com) — Bitcoin sports betting for India
 - [CryptoSlotsPro.com](https://cryptoslotspro.com) — Crypto slots & casino guide for Vietnam
 
+## Related Projects
+
+- [provably-fair-verifier](https://github.com/mkleo2731/provably-fair-verifier) — Verify provably fair casino game results (HMAC-SHA256)
+- [crypto-betting-odds](https://github.com/mkleo2731/crypto-betting-odds) — Odds conversion, parlay calculator, Kelly criterion, crypto payouts
+
 ## Contributing
 
 We welcome contributions! Here's how:
