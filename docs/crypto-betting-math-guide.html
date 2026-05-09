@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Math Behind Crypto Betting: Odds, Parlays, and the Kelly Criterion</title>
+<meta name="description" content="Understanding odds conversion, expected value, parlay mathematics, and the Kelly Criterion for optimal crypto betting strategy.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#e0e0e0;background:#0d1117;max-width:800px;margin:0 auto;padding:2rem 1rem}
+h1{font-size:2rem;margin:1rem 0;color:#fff}
+h2{font-size:1.5rem;margin:2rem 0 1rem;color:#c9d1d9;border-bottom:1px solid #30363d;padding-bottom:.5rem}
+h3{font-size:1.2rem;margin:1.5rem 0 .5rem;color:#c9d1d9}
+p{margin:.8rem 0}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+pre{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1rem;overflow-x:auto;margin:1rem 0}
+code{font-family:'SFMono-Regular',Consolas,monospace;font-size:.9em;color:#c9d1d9}
+p code{background:#161b22;padding:.2em .4em;border-radius:3px}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th,td{border:1px solid #30363d;padding:.5rem;text-align:left}
+th{background:#161b22;color:#c9d1d9}
+ol,ul{margin:.5rem 0;padding-left:2rem}
+li{margin:.3rem 0}
+.nav{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0;padding:1rem;background:#161b22;border-radius:6px;border:1px solid #30363d}
+.nav a{color:#58a6ff;font-weight:500}
+.footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #30363d;font-size:.85rem;color:#8b949e}
+.hero{background:linear-gradient(135deg,#161b22,#0d1117);border:1px solid #30363d;border-radius:8px;padding:2rem;margin:1rem 0}
+</style>
+</head>
+<body>
+<div class="hero">
+<p style="color:#8b949e;font-size:.9rem">crypto-casino-data Blog</p>
+<h1>The Math Behind Crypto Betting: Odds, Parlays, and the Kelly Criterion</h1>
+<p style="color:#8b949e">Published May 10, 2026 &bull; 2,461 words</p>
+</div>
+<p>Most bettors lose money because they don't understand the math. Not the gambling — the math. Understanding odds conversion, expected value, and optimal stake sizing is the difference between gambling and investing.</p>
+<p>This guide covers the essential mathematics every crypto bettor should know.</p>
+<h2>Odds Formats: The Same Thing, Three Ways</h2>
+<p>Betting odds come in three formats that all express the same information:</p>
+<table>
+<tr><th>Format</th><th>Example</th><th>Meaning</th></tr>
+<tr><td>Decimal</td><td>2.50</td><td>Bet 1, get 2.50 back (1.50 profit)</td></tr>
+<tr><td>American</td><td>+150</td><td>Bet 100, profit 150</td></tr>
+<tr><td>Fractional</td><td>3/2</td><td>Bet 2, profit 3</td></tr>
+</table>
+<h3>Conversion Formulas</h3>
+<p><strong>Decimal to American:</strong></p>
+<pre><code>
+If decimal &gt;= 2.0: American = (decimal - 1) × 100
+If decimal &lt; 2.0:  American = -100 / (decimal - 1)
+</code></pre>
+<p><strong>Decimal to Implied Probability:</strong></p>
+<pre><code>
+probability = 1 / decimal × 100%
+</code></pre>
+<p>So decimal odds of 2.50 imply a 40% chance (1/2.50).</p>
+<p>We've open-sourced a complete conversion library: <a href="https://github.com/mkleo2731/crypto-betting-odds">crypto-betting-odds on GitHub</a>.</p>
+<h2>Parlay Mathematics</h2>
+<p>A parlay combines multiple bets into one. The combined odds multiply:</p>
+<pre><code>
+parlayOdds = leg1 × leg2 × leg3 × ... × legN
+</code></pre>
+<p><strong>Example:</strong> A 4-leg parlay at 1.91, 2.10, 1.75, and 2.40:</p>
+<pre><code>
+combined = 1.91 × 2.10 × 1.75 × 2.40 = 16.84
+</code></pre>
+<p>A 0.01 BTC stake returns 0.1684 BTC — that's a 1,584% return. Sounds great, right?</p>
+<h3>The Parlay Trap</h3>
+<p>Here's what most bettors miss. The implied probability of hitting all four legs:</p>
+<pre><code>
+probability = (1/1.91) × (1/2.10) × (1/1.75) × (1/2.40)
+            = 0.523 × 0.476 × 0.571 × 0.417
+            = 5.3%
+</code></pre>
+<p>You'll hit this parlay roughly 1 in 19 times. The payout multiplier is 16.84x, but you need 18.87x just to break even (1/0.053). The house edge on parlays is typically 15-30%.</p>
+<h2>Expected Value (EV): The Only Metric That Matters</h2>
+<p>Expected value tells you if a bet is profitable long-term:</p>
+<pre><code>
+EV = (probability × profit) - ((1 - probability) × stake)
+</code></pre>
+<p><strong>Positive EV example:</strong></p>
+<ul>
+<li>You estimate Team A has a 60% chance to win</li>
+<li>The odds are 2.10 (implied probability: 47.6%)</li>
+<li>Stake: 0.01 BTC</li>
+<pre><code>
+EV = (0.60 × 0.011) - (0.40 × 0.01) = 0.0066 - 0.004 = +0.0026 BTC
+</code></pre>
+</ul>
+<p>This bet has a positive expected value of 0.0026 BTC per bet. Over 100 bets, you'd expect to profit ~0.26 BTC.</p>
+<h2>The Kelly Criterion: Optimal Stake Sizing</h2>
+<p>Knowing a bet is +EV isn't enough — you need to know how much to bet. The Kelly Criterion tells you the mathematically optimal stake:</p>
+<pre><code>
+kellyFraction = (probability × (decimal - 1) - (1 - probability)) / (decimal - 1)
+</code></pre>
+<p><strong>Example:</strong></p>
+<ul>
+<li>60% edge, 2.10 odds:</li>
+<pre><code>
+kelly = (0.60 × 1.10 - 0.40) / 1.10 = 0.26 / 1.10 = 23.6% of bankroll
+</code></pre>
+</ul>
+<h3>Fractional Kelly</h3>
+<p>Full Kelly is aggressive. Most professional bettors use fractional Kelly:</p>
+<table>
+<tr><th>Strategy</th><th>Fraction</th><th>Risk Level</th></tr>
+<tr><td>Full Kelly</td><td>100%</td><td>Very aggressive</td></tr>
+<tr><td>Half Kelly</td><td>50%</td><td>Moderate</td></tr>
+<tr><td>Quarter Kelly</td><td>25%</td><td>Conservative</td></tr>
+</table>
+<p>For crypto betting where bankroll volatility is already high (crypto price fluctuations), quarter Kelly is recommended.</p>
+<h2>Crypto-Specific Calculations</h2>
+<p>When betting with cryptocurrency, you need to account for the crypto's price:</p>
+<pre><code>
+btcPayout = stake × odds
+usdValue = btcPayout × currentBTCPrice
+</code></pre>
+<p>If BTC is at $95,000 and you bet 0.01 BTC at 2.50 odds:</p>
+<ul>
+<li>BTC payout: 0.025 BTC</li>
+<li>USD value: $2,375</li>
+<li>Profit in USD: $1,425</li>
+</ul>
+<p>But if BTC drops 10% before you cash out, your profit shrinks to $1,187.50. This is why stablecoin betting (USDT, USDC) reduces variance.</p>
+<h2>Hedging with Crypto</h2>
+<p>Hedging lets you lock in profit regardless of outcome:</p>
+<pre><code>
+layStake = (backStake × backOdds) / layOdds
+guaranteedProfit = backStake × (backOdds - 1) - layStake × (layOdds - 1)
+</code></pre>
+<p>This is especially useful in prediction markets where odds shift dramatically.</p>
+<h2>Tools and Resources</h2>
+<p>We've built open-source tools to handle all these calculations:</p>
+<ul>
+<li><strong><a href="https://github.com/mkleo2731/crypto-betting-odds">crypto-betting-odds</a></strong> — JavaScript library for odds conversion, parlay calculation, Kelly criterion, and EV analysis</li>
+<li><strong><a href="https://github.com/mkleo2731/crypto-casino-data">crypto-casino-data</a></strong> — Dataset of 26+ crypto gambling platforms with features and ratings</li>
+</ul>
+<h3>Platform Guides by Region</h3>
+<p>For platform-specific information and reviews:</p>
+<ul>
+<li><a href="https://coinbetpro.com">CoinBetPro.com</a> — Global crypto prediction markets and casino reviews</li>
+<li><a href="https://btcgamblepro.com">BTCGamblePro.com</a> — Bitcoin gambling guide for Nigeria</li>
+<li><a href="https://btcbettingguide.com">BTCBettingGuide.com</a> — Crypto betting guide for Brazil (Portuguese available)</li>
+<li><a href="https://bitcoinbetpro.com">BitcoinBetPro.com</a> — Bitcoin sports betting for India (IPL, cricket, football)</li>
+<li><a href="https://cryptoslotspro.com">CryptoSlotsPro.com</a> — Crypto slots and casino guide for Vietnam</li>
+</ul>
+<h2>Key Takeaways</h2>
+<ol>
+<li><strong>Convert odds</strong> to implied probability before betting — if your estimated probability exceeds the implied probability, the bet has positive EV</li>
+<li><strong>Parlays are entertainment</strong>, not strategy — the house edge compounds with each leg</li>
+<li><strong>Use Kelly criterion</strong> (fractional) to size your bets — never go all-in on a single bet</li>
+<li><strong>Account for crypto volatility</strong> — stablecoins reduce variance if you're betting for profit, not speculation</li>
+<li><strong>Track your EV</strong>, not your results — small sample results are noise, EV is signal</li>
+</ol>
+<hr>
+<p><em>Calculations powered by <a href="https://github.com/mkleo2731/crypto-betting-odds">crypto-betting-odds</a>. Platform data from <a href="https://github.com/mkleo2731/crypto-casino-data">crypto-casino-data</a>. For comprehensive reviews, visit <a href="https://coinbetpro.com">CoinBetPro.com</a>.</em></p>
+<div class="footer">
+<p><strong>Related Resources:</strong></p>
+<div class="nav">
+<a href="https://coinbetpro.com">CoinBetPro</a>
+<a href="https://btcgamblepro.com">BTCGamblePro</a>
+<a href="https://btcbettingguide.com">BTCBettingGuide</a>
+<a href="https://bitcoinbetpro.com">BitcoinBetPro</a>
+<a href="https://cryptoslotspro.com">CryptoSlotsPro</a>
+</div>
+<p>&copy; 2026 mkleo2731. Open source under MIT License.</p>
+</div>
+</body>
+</html>
