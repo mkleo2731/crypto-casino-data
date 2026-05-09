@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Odds Calculator — Convert Decimal, Fractional, American & Probability</title>
+  <meta name="description" content="Free odds converter for sports betting and prediction markets. Instantly convert between decimal, fractional, American odds and implied probability.">
+  <meta property="og:title" content="Crypto Odds Calculator — Odds Format Converter">
+  <meta property="og:description" content="Convert between decimal, fractional, American odds and implied probability instantly. Free tool for crypto bettors.">
+  <meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',card:'#12121a',border:'#1e1e2e',accent:'#7c6aff',accent2:'#5b8def',dim:'#6b7280',green:'#22c55e'}}}}</script>
+  <style>body{background:#0a0a0f;color:#e5e7eb;font-family:system-ui,-apple-system,sans-serif}a{text-decoration:none}input{background:#0a0a0f;border:1px solid #1e1e2e;border-radius:0.5rem;padding:0.625rem 0.75rem;color:#e5e7eb;font-size:0.875rem;width:100%}input:focus{outline:none;border-color:rgba(124,106,255,0.5)}.format-active{background:rgba(124,106,255,0.15)!important;border-color:rgba(124,106,255,0.5)!important;color:#fff!important}</style>
+</head>
+<body>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <nav class="flex items-center gap-1.5 text-xs text-dim mb-6">
+      <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Odds Calculator</span>
+    </nav>
+
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-black text-white mb-2">Odds Calculator & Converter</h1>
+      <p class="text-sm text-dim max-w-2xl">Convert between different odds formats used in sports betting and prediction markets. Enter a value in any format and all others update automatically.</p>
+    </header>
+
+    <!-- Input cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+      <div class="rounded-xl border border-border bg-card p-4" id="card-decimal">
+        <label class="block text-xs font-semibold text-dim uppercase tracking-wider mb-2">Decimal Odds</label>
+        <input type="text" id="decimal" placeholder="e.g. 2.50" oninput="convert('decimal')">
+        <p class="text-[10px] text-dim mt-1.5">Used in Europe, Australia. Includes stake in payout.</p>
+      </div>
+
+      <div class="rounded-xl border border-border bg-card p-4" id="card-fractional">
+        <label class="block text-xs font-semibold text-dim uppercase tracking-wider mb-2">Fractional Odds</label>
+        <input type="text" id="fractional" placeholder="e.g. 3/2" oninput="convert('fractional')">
+        <p class="text-[10px] text-dim mt-1.5">Used in UK & Ireland. Shows profit relative to stake.</p>
+      </div>
+
+      <div class="rounded-xl border border-border bg-card p-4" id="card-american">
+        <label class="block text-xs font-semibold text-dim uppercase tracking-wider mb-2">American Odds</label>
+        <input type="text" id="american" placeholder="e.g. +150" oninput="convert('american')">
+        <p class="text-[10px] text-dim mt-1.5">Used in USA. + profit on $100, or - stake to win $100.</p>
+      </div>
+
+      <div class="rounded-xl border border-border bg-card p-4" id="card-probability">
+        <label class="block text-xs font-semibold text-dim uppercase tracking-wider mb-2">Implied Probability</label>
+        <input type="text" id="probability" placeholder="e.g. 40" oninput="convert('probability')">
+        <p class="text-[10px] text-dim mt-1.5">The percentage chance implied by the odds.</p>
+      </div>
+    </div>
+
+    <!-- Payout calculator -->
+    <div class="rounded-xl border border-accent/20 bg-accent/5 p-5 mb-8">
+      <h2 class="text-sm font-bold text-white mb-3">Payout Calculator</h2>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs text-dim mb-1">Stake Amount ($)</label>
+          <input type="number" id="stake" placeholder="100" value="100" min="0" step="any" oninput="updatePayout()" style="background:rgba(124,106,255,0.08);border-color:rgba(124,106,255,0.3)">
+        </div>
+        <div class="flex flex-col justify-center">
+          <div class="text-xs text-dim">Potential Payout</div>
+          <div id="payout" class="text-xl font-black text-green">$250.00</div>
+          <div class="text-xs text-dim">Profit: <span id="profit" class="text-green">$150.00</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick reference -->
+    <section class="mb-10">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-dim mb-3">Common Odds Reference</h2>
+      <div class="rounded-xl border border-border bg-card overflow-hidden">
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-border text-dim">
+              <th class="text-left p-3 font-semibold">Decimal</th>
+              <th class="text-left p-3 font-semibold">Fractional</th>
+              <th class="text-left p-3 font-semibold">American</th>
+              <th class="text-left p-3 font-semibold">Probability</th>
+            </tr>
+          </thead>
+          <tbody class="text-white" id="refTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Prediction links -->
+    <section class="mb-8">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-dim mb-3">AI Predictions & Odds Analysis</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <a href="https://coinbetpro.com/en/predictions/sports" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 transition-all">
+          <span class="text-lg">⚽</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Global Sports Predictions</span>
+            <span class="text-[11px] text-dim">AI-powered odds analysis across major leagues</span>
+          </div>
+        </a>
+        <a href="https://btcgamblepro.com/en/predictions/local" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 transition-all">
+          <span class="text-lg">🇳🇬</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Nigeria Match Predictions</span>
+            <span class="text-[11px] text-dim">Premier League & NPFL AI predictions</span>
+          </div>
+        </a>
+        <a href="https://bitcoinbetpro.com/en/predictions/local" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 transition-all">
+          <span class="text-lg">🏏</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">India Cricket Predictions</span>
+            <span class="text-[11px] text-dim">IPL and cricket AI odds analysis</span>
+          </div>
+        </a>
+        <a href="https://cryptoslotspro.com/vi/predictions/local" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 transition-all">
+          <span class="text-lg">🇻🇳</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">V-League Predictions</span>
+            <span class="text-[11px] text-dim">Vietnamese football AI predictions</span>
+          </div>
+        </a>
+        <a href="https://btcbettingguide.com/pt/predictions/local" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-accent/30 transition-all sm:col-span-2">
+          <span class="text-lg">🇧🇷</span>
+          <div>
+            <span class="text-[13px] font-semibold text-white block">Previsoes de Jogos do Brasil</span>
+            <span class="text-[11px] text-dim">Brasileirao e Copa do Brasil com analise de odds IA</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="pt-6 border-t border-border">
+      <p class="text-xs text-dim">All calculations run in your browser. No data is stored or transmitted. <a href="index.html" class="text-accent hover:underline">Back to all tools</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const refData = [
+      [1.20, '1/5', -500, 83.33],
+      [1.50, '1/2', -200, 66.67],
+      [2.00, '1/1', +100, 50.00],
+      [2.50, '3/2', +150, 40.00],
+      [3.00, '2/1', +200, 33.33],
+      [4.00, '3/1', +300, 25.00],
+      [5.00, '4/1', +400, 20.00],
+      [10.00, '9/1', +900, 10.00],
+    ];
+
+    const tbody = document.getElementById('refTable');
+    refData.forEach(([d, f, a, p], i) => {
+      const cls = i % 2 === 0 ? '' : 'bg-white/[0.02]';
+      tbody.innerHTML += `<tr class="${cls} border-b border-border/50 cursor-pointer hover:bg-accent/5" onclick="setDecimal(${d})"><td class="p-3">${d.toFixed(2)}</td><td class="p-3">${f}</td><td class="p-3">${a > 0 ? '+' : ''}${a}</td><td class="p-3">${p.toFixed(2)}%</td></tr>`;
+    });
+
+    function setDecimal(val) {
+      document.getElementById('decimal').value = val.toFixed(2);
+      convert('decimal');
+    }
+
+    function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
+
+    function toFractional(decimal) {
+      if (decimal <= 1) return '0/1';
+      const profit = decimal - 1;
+      let num = Math.round(profit * 1000);
+      let den = 1000;
+      const g = gcd(num, den);
+      num /= g; den /= g;
+      return `${num}/${den}`;
+    }
+
+    function convert(source) {
+      document.querySelectorAll('[id^="card-"]').forEach(c => c.classList.remove('format-active'));
+
+      let dec;
+      const val = document.getElementById(source).value.trim();
+      if (!val) { clearAll(); return; }
+
+      switch (source) {
+        case 'decimal':
+          dec = parseFloat(val);
+          break;
+        case 'fractional': {
+          const parts = val.split('/');
+          if (parts.length !== 2) return;
+          const num = parseFloat(parts[0]), den = parseFloat(parts[1]);
+          if (!den) return;
+          dec = (num / den) + 1;
+          break;
+        }
+        case 'american': {
+          const am = parseFloat(val);
+          if (isNaN(am)) return;
+          dec = am > 0 ? (am / 100) + 1 : (100 / Math.abs(am)) + 1;
+          break;
+        }
+        case 'probability': {
+          const prob = parseFloat(val);
+          if (isNaN(prob) || prob <= 0 || prob >= 100) return;
+          dec = 100 / prob;
+          break;
+        }
+      }
+
+      if (isNaN(dec) || dec < 1) return;
+
+      document.getElementById(`card-${source}`).classList.add('format-active');
+
+      if (source !== 'decimal') document.getElementById('decimal').value = dec.toFixed(4);
+      if (source !== 'fractional') document.getElementById('fractional').value = toFractional(dec);
+      if (source !== 'american') {
+        const am = dec >= 2 ? ((dec - 1) * 100) : (-100 / (dec - 1));
+        document.getElementById('american').value = (am > 0 ? '+' : '') + am.toFixed(0);
+      }
+      if (source !== 'probability') {
+        document.getElementById('probability').value = (100 / dec).toFixed(2);
+      }
+
+      updatePayout(dec);
+    }
+
+    function updatePayout(dec) {
+      if (!dec) {
+        dec = parseFloat(document.getElementById('decimal').value);
+      }
+      const stake = parseFloat(document.getElementById('stake').value) || 0;
+      if (isNaN(dec) || dec < 1) return;
+      const payout = stake * dec;
+      const profit = payout - stake;
+      document.getElementById('payout').textContent = '$' + payout.toFixed(2);
+      document.getElementById('profit').textContent = '$' + profit.toFixed(2);
+    }
+
+    function clearAll() {
+      ['decimal', 'fractional', 'american', 'probability'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('payout').textContent = '$0.00';
+      document.getElementById('profit').textContent = '$0.00';
+    }
+
+    convert('decimal');
+    document.getElementById('decimal').value = '2.50';
+    convert('decimal');
+  </script>
+</body>
+</html>
