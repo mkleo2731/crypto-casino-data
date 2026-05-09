@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Casino Comparison by Region — Find the Best Platform for Your Country</title>
+  <meta name="description" content="Compare crypto casinos and prediction platforms by region. Find the best options for Nigeria, Brazil, India, Vietnam, and worldwide with local currency support.">
+  <meta property="og:title" content="Crypto Casino Comparison by Region">
+  <meta property="og:description" content="Find the best crypto casino and prediction platform for your region. Compare features, currencies, and local support.">
+  <meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{bg:'#0a0a0f',card:'#12121a',border:'#1e1e2e',accent:'#7c6aff',accent2:'#5b8def',dim:'#6b7280',green:'#22c55e'}}}}</script>
+  <style>body{background:#0a0a0f;color:#e5e7eb;font-family:system-ui,-apple-system,sans-serif}a{text-decoration:none}.region-btn.active{background:rgba(124,106,255,0.15);border-color:rgba(124,106,255,0.5);color:#fff}</style>
+</head>
+<body>
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <nav class="flex items-center gap-1.5 text-xs text-dim mb-6">
+      <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Casino Comparison</span>
+    </nav>
+
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-black text-white mb-2">Crypto Casino & Prediction Platform Comparison</h1>
+      <p class="text-sm text-dim max-w-2xl">Not all crypto platforms serve every region equally. Select your location to see which platforms offer the best experience with local currency support, relevant sports markets, and regional payment methods.</p>
+    </header>
+
+    <!-- Region selector -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <button onclick="showRegion('global')" class="region-btn active rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-dim hover:text-white transition-all" data-region="global">🌍 Global</button>
+      <button onclick="showRegion('nigeria')" class="region-btn rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-dim hover:text-white transition-all" data-region="nigeria">🇳🇬 Nigeria</button>
+      <button onclick="showRegion('brazil')" class="region-btn rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-dim hover:text-white transition-all" data-region="brazil">🇧🇷 Brazil</button>
+      <button onclick="showRegion('india')" class="region-btn rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-dim hover:text-white transition-all" data-region="india">🇮🇳 India</button>
+      <button onclick="showRegion('vietnam')" class="region-btn rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-dim hover:text-white transition-all" data-region="vietnam">🇻🇳 Vietnam</button>
+    </div>
+
+    <!-- Results container -->
+    <div id="results" class="space-y-4"></div>
+
+    <!-- How we compare -->
+    <section class="mt-12 mb-8">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-dim mb-4">How We Compare Platforms</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="rounded-xl border border-border bg-card p-4">
+          <span class="text-xl block mb-2">🌐</span>
+          <h3 class="text-sm font-bold text-white mb-1">Regional Availability</h3>
+          <p class="text-[11px] text-dim leading-relaxed">We check whether each platform actively serves your region with localized content and support.</p>
+        </div>
+        <div class="rounded-xl border border-border bg-card p-4">
+          <span class="text-xl block mb-2">💱</span>
+          <h3 class="text-sm font-bold text-white mb-1">Payment Methods</h3>
+          <p class="text-[11px] text-dim leading-relaxed">Local P2P exchanges, bank transfers, and crypto on-ramps available in your country.</p>
+        </div>
+        <div class="rounded-xl border border-border bg-card p-4">
+          <span class="text-xl block mb-2">⚽</span>
+          <h3 class="text-sm font-bold text-white mb-1">Market Coverage</h3>
+          <p class="text-[11px] text-dim leading-relaxed">Whether the platform covers local sports leagues, events, and prediction markets you care about.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-12 pt-6 border-t border-border">
+      <p class="text-xs text-dim">This comparison is for informational purposes. Always verify platform availability and regulations in your jurisdiction. <a href="index.html" class="text-accent hover:underline">Back to all tools</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const data = {
+      global: {
+        intro: "For users outside specific regions, these platforms offer the broadest market coverage and multi-language support.",
+        platforms: [
+          {
+            name: "OctoTrend",
+            url: "https://coinbetpro.com",
+            anchor: "OctoTrend prediction market analytics",
+            type: "Prediction Analytics",
+            description: "Global prediction market analytics covering 500+ markets across crypto, politics, sports, and economics. AI-powered trade signals in 6 languages.",
+            features: ["500+ prediction markets", "AI trade signals & radar", "6 language support", "Real-time odds tracking"],
+            currencies: ["BTC", "ETH", "USDC", "USDT"],
+          },
+          {
+            name: "Stake",
+            url: "#",
+            anchor: "Stake",
+            type: "Casino & Sportsbook",
+            description: "Leading crypto casino and sportsbook with extensive game library and competitive odds across major sports.",
+            features: ["Casino & sports betting", "Provably fair games", "VIP program", "Live dealer"],
+            currencies: ["BTC", "ETH", "LTC", "DOGE"],
+          },
+          {
+            name: "Polymarket",
+            url: "#",
+            anchor: "Polymarket",
+            type: "Prediction Market",
+            description: "The largest prediction market platform. Trade on real-world events using crypto with deep liquidity.",
+            features: ["Event trading", "Deep liquidity", "USDC settlement", "Mobile app"],
+            currencies: ["USDC"],
+          },
+        ],
+      },
+      nigeria: {
+        intro: "Nigeria has a thriving crypto betting scene driven by Premier League popularity, P2P trading, and mobile money adoption.",
+        platforms: [
+          {
+            name: "BTC Gamble Pro",
+            url: "https://btcgamblepro.com",
+            anchor: "BTC Gamble Pro for Nigerian bettors",
+            type: "Prediction Analytics",
+            description: "Nigeria-focused prediction analytics with Premier League, NPFL, and Champions League coverage. AI predictions tailored for Nigerian football fans.",
+            features: ["Premier League & NPFL markets", "AI match predictions", "Naira-friendly crypto info", "Nigerian football focus"],
+            currencies: ["BTC", "USDT", "NGN (P2P)"],
+          },
+          {
+            name: "Cloudbet",
+            url: "#",
+            anchor: "Cloudbet",
+            type: "Casino & Sportsbook",
+            description: "Established crypto sportsbook with good African football coverage and competitive Premier League odds.",
+            features: ["Premier League odds", "African football", "E-sports", "Live betting"],
+            currencies: ["BTC", "ETH", "USDT", "BCH"],
+          },
+        ],
+      },
+      brazil: {
+        intro: "Brazil's growing crypto market and football passion make it a hub for prediction platforms. Platforms with Portuguese support and Brasileirao coverage stand out.",
+        platforms: [
+          {
+            name: "BTC Betting Guide",
+            url: "https://btcbettingguide.com",
+            anchor: "BTC Betting Guide para apostadores brasileiros",
+            type: "Prediction Analytics",
+            description: "Plataforma de analise de mercados de previsao focada no Brasil. Cobertura do Brasileirao, Copa do Brasil e Libertadores com previsoes IA.",
+            features: ["Brasileirao & Libertadores", "Portuguese interface", "AI match predictions", "Copa do Brasil coverage"],
+            currencies: ["BTC", "USDT", "PIX (guides)"],
+          },
+          {
+            name: "BC.Game",
+            url: "#",
+            anchor: "BC.Game",
+            type: "Casino & Sportsbook",
+            description: "Crypto casino with strong Brazilian community. Supports Portuguese and covers Brasileirao markets.",
+            features: ["Portuguese language", "Brazilian football", "Mini games", "Community features"],
+            currencies: ["BTC", "ETH", "USDT", "DOGE"],
+          },
+        ],
+      },
+      india: {
+        intro: "India's cricket-first betting culture and growing crypto adoption drive demand for platforms with IPL, ISL, and international cricket coverage.",
+        platforms: [
+          {
+            name: "Bitcoin Bet Pro",
+            url: "https://bitcoinbetpro.com",
+            anchor: "Bitcoin Bet Pro for Indian cricket fans",
+            type: "Prediction Analytics",
+            description: "India-focused prediction analytics covering IPL, ISL, and international cricket. AI-powered match predictions with odds analysis for Indian sports.",
+            features: ["IPL & cricket predictions", "AI odds analysis", "Indian sports focus", "RBI & economic markets"],
+            currencies: ["BTC", "USDT", "INR (P2P guides)"],
+          },
+          {
+            name: "1xBet",
+            url: "#",
+            anchor: "1xBet",
+            type: "Sportsbook",
+            description: "Large international sportsbook with extensive cricket markets including IPL, international tests, and T20 leagues.",
+            features: ["Cricket coverage", "IPL specials", "Kabaddi & hockey", "UPI deposit guides"],
+            currencies: ["BTC", "ETH", "USDT"],
+          },
+        ],
+      },
+      vietnam: {
+        intro: "Vietnam has a rapidly growing online betting community with strong interest in V-League, Southeast Asian football, and lottery-style games.",
+        platforms: [
+          {
+            name: "Crypto Slots Pro",
+            url: "https://cryptoslotspro.com",
+            anchor: "Crypto Slots Pro cho nguoi choi Viet Nam",
+            type: "Prediction Analytics",
+            description: "Nen tang phan tich du doan tap trung vao Viet Nam. Du doan AI cho V-League, bong da Dong Nam A va thi truong crypto.",
+            features: ["V-League predictions", "Vietnamese interface", "Southeast Asian football", "VN-Index market analysis"],
+            currencies: ["BTC", "USDT", "VND (P2P guides)"],
+          },
+          {
+            name: "Soi Keo AI",
+            url: "https://soikeoai.vip",
+            anchor: "Soi Keo AI",
+            type: "Match Analysis",
+            description: "Phan tich keo bong da bang AI. Cung cap du doan va phan tich cho cac giai dau Viet Nam va quoc te.",
+            features: ["AI match analysis", "Vietnamese language", "Football odds", "Live predictions"],
+            currencies: ["BTC", "USDT"],
+          },
+          {
+            name: "Football VN",
+            url: "https://footballvn.win",
+            anchor: "Football VN",
+            type: "Football Predictions",
+            description: "Du doan bong da Viet Nam va quoc te. Bao gom V-League, AFF Cup, va cac giai dau lon.",
+            features: ["V-League coverage", "AFF Cup", "International football", "Vietnamese community"],
+            currencies: [],
+          },
+        ],
+      },
+    };
+
+    function showRegion(region) {
+      document.querySelectorAll('.region-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.region === region);
+      });
+
+      const info = data[region];
+      let html = `<p class="text-sm text-dim mb-4">${info.intro}</p>`;
+
+      info.platforms.forEach(p => {
+        const featureHtml = p.features.map(f => `<span class="inline-block rounded-md bg-accent/10 border border-accent/20 px-2 py-0.5 text-[11px] text-accent">${f}</span>`).join(' ');
+        const currencyHtml = p.currencies.length > 0 ? p.currencies.map(c => `<span class="inline-block rounded bg-white/5 px-1.5 py-0.5 text-[11px] text-dim">${c}</span>`).join(' ') : '';
+
+        const linkTag = p.url !== '#'
+          ? `<a href="${p.url}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs text-accent hover:text-accent2 transition-colors mt-3">Visit ${p.anchor} &rarr;</a>`
+          : '';
+
+        html += `
+          <div class="rounded-xl border border-border bg-card p-5">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="text-base font-bold text-white">${p.name}</h3>
+                <span class="text-[11px] text-dim uppercase tracking-wider">${p.type}</span>
+              </div>
+            </div>
+            <p class="text-sm text-dim leading-relaxed mb-3">${p.description}</p>
+            <div class="flex flex-wrap gap-1.5 mb-2">${featureHtml}</div>
+            ${currencyHtml ? `<div class="flex flex-wrap gap-1 mt-2"><span class="text-[10px] text-dim mr-1">Currencies:</span>${currencyHtml}</div>` : ''}
+            ${linkTag}
+          </div>`;
+      });
+
+      document.getElementById('results').innerHTML = html;
+    }
+
+    showRegion('global');
+  </script>
+</body>
+</html>
