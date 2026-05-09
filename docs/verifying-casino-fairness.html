@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Verify Any Crypto Casino Is Fair: A Step-by-Step Guide</title>
+    <meta name="description" content="Step-by-step guide to verifying crypto casino fairness. Provably fair verification, RNG audit checks, license validation, and red flags to watch for.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef9ff',
+                            100: '#d8f1ff',
+                            200: '#b9e7ff',
+                            300: '#89daff',
+                            400: '#52c4ff',
+                            500: '#2aa6ff',
+                            600: '#1488f5',
+                            700: '#0d6fe1',
+                            800: '#1259b6',
+                            900: '#154c8f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Verify Any Crypto Casino Is Fair",
+        "description": "A step-by-step guide to verifying whether a crypto casino is genuinely fair, covering license checks, provably fair verification, RNG audits, RTP validation, withdrawal testing, and reputation analysis.",
+        "totalTime": "PT30M",
+        "tool": [
+            {
+                "@type": "HowToTool",
+                "name": "provably-fair-verifier"
+            },
+            {
+                "@type": "HowToTool",
+                "name": "Web browser"
+            }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Check the License",
+                "text": "Verify the casino holds a valid gambling license by checking the relevant regulatory authority's public register. Look for Curacao eGaming, Malta Gaming Authority, Isle of Man, Gibraltar, or Kahnawake licenses.",
+                "url": "https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html#step-1"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Verify Provably Fair Implementation",
+                "text": "Confirm the casino uses a provably fair system by checking the commitment scheme: server seed hash is published before play, combined with your client seed and a nonce to produce verifiable results. Use the provably-fair-verifier tool for independent verification.",
+                "url": "https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html#step-2"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Check RNG Audit Certificates",
+                "text": "Look for independent RNG audit certificates from recognized labs such as iTech Labs, GLI, BMM Testlabs, or eCOGRA. Verify the certificate is current and names the specific games tested.",
+                "url": "https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html#step-3"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Verify RTP Claims",
+                "text": "Check the casino's stated Return to Player percentages against industry standards. Slots should show 95-97% RTP, blackjack around 99.5%, and crash games 97-99%. Cross-reference with third-party RTP tracking sites.",
+                "url": "https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html#step-4"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 5,
+                "name": "Test the Withdrawal Process",
+                "text": "Make a small test withdrawal before committing larger deposits. Verify withdrawal times match stated expectations and watch for unexpected KYC demands, changed limits, or excessive fees.",
+                "url": "https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html#step-5"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 6,
+                "name": "Check Community and Reputation",
+                "text": "Research the platform's reputation on Reddit, Bitcointalk, and Trustpilot. Check how long it has operated and look for patterns of payment delays or scam reports.",
+                "url": "https://github.com/mkleo2731/provably-fair-verifier/blob/main/docs/verifying-casino-fairness.html#step-6"
+            }
+        ]
+    }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1a2e; }
+        ::-webkit-scrollbar-thumb { background: #4a5568; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+        /* Step number styling */
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+
+    <!-- Navigation / Breadcrumb -->
+    <nav class="bg-gray-950 border-b border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-400">
+                <a href="https://github.com/mkleo2731/provably-fair-verifier" class="hover:text-brand-400 transition-colors flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    provably-fair-verifier
+                </a>
+                <span>/</span>
+                <a href="https://github.com/mkleo2731/provably-fair-verifier/tree/main/docs" class="hover:text-brand-400 transition-colors">docs</a>
+                <span>/</span>
+                <span class="text-gray-200 font-medium">verifying-casino-fairness</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+
+        <!-- Article Header -->
+        <header class="mb-10">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-brand-600/20 text-brand-400 text-xs font-semibold px-3 py-1 rounded-full border border-brand-600/30">Guide</span>
+                <span class="bg-green-600/20 text-green-400 text-xs font-semibold px-3 py-1 rounded-full border border-green-600/30">Fairness</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+                How to Verify Any Crypto Casino Is Fair: A Step-by-Step Guide
+            </h1>
+            <p class="text-lg text-gray-400 leading-relaxed max-w-3xl">
+                A practical, actionable guide for verifying whether a crypto casino is genuinely fair&mdash;covering license validation, provably fair cryptography, RNG audits, RTP analysis, and the red flags that signal trouble.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                <time datetime="2026-05-10">Updated: May 10, 2026</time>
+                <span>&middot;</span>
+                <span>~7 min read</span>
+                <span>&middot;</span>
+                <a href="https://github.com/mkleo2731/provably-fair-verifier" class="text-brand-400 hover:text-brand-300 transition-colors">View on GitHub &rarr;</a>
+            </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 mb-10">
+            <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Table of Contents</h2>
+            <ol class="space-y-2 text-brand-400">
+                <li><a href="#introduction" class="hover:text-brand-300 transition-colors">Introduction: Why Verification Matters</a></li>
+                <li><a href="#step-1" class="hover:text-brand-300 transition-colors">Step 1: Check the License</a></li>
+                <li><a href="#step-2" class="hover:text-brand-300 transition-colors">Step 2: Verify Provably Fair Implementation</a></li>
+                <li><a href="#step-3" class="hover:text-brand-300 transition-colors">Step 3: Check RNG Audit Certificates</a></li>
+                <li><a href="#step-4" class="hover:text-brand-300 transition-colors">Step 4: Verify RTP Claims</a></li>
+                <li><a href="#step-5" class="hover:text-brand-300 transition-colors">Step 5: Test the Withdrawal Process</a></li>
+                <li><a href="#step-6" class="hover:text-brand-300 transition-colors">Step 6: Check Community and Reputation</a></li>
+                <li><a href="#red-flags" class="hover:text-brand-300 transition-colors">Red Flags Checklist</a></li>
+            </ol>
+        </div>
+
+        <!-- Introduction -->
+        <section id="introduction" class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Introduction: Why Verification Matters</h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Trust is the single biggest barrier in crypto gambling. Unlike traditional online casinos bound by strict jurisdictional oversight, crypto platforms operate in a regulatory gray area where claims of fairness are easy to make and difficult to challenge. The result: players must verify for themselves.
+            </p>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                The good news is that blockchain technology makes verification not just possible but practical. Provably fair algorithms, public audit records, and on-chain transparency give you tools that traditional gambling never offered. This guide walks you through six concrete steps to determine whether a crypto casino is genuinely fair or just claiming to be.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                Every step below is something you can do right now, with free tools. By the end, you will know how to evaluate any platform's fairness claims with confidence. For platform-level reviews and comparisons across the market, resources like <a href="https://coinbetpro.com" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">CoinBetPro</a> maintain updated databases of verified casinos and their fairness credentials.
+            </p>
+        </section>
+
+        <!-- Step 1: Check the License -->
+        <section id="step-1" class="mb-12">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="step-number bg-brand-600 text-white">1</div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Check the License</h2>
+                    <p class="text-gray-400 mt-1">Verify the platform holds a valid, active gambling license</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                A legitimate gambling license is the baseline requirement. It does not guarantee fairness by itself, but the absence of one is an immediate disqualifier. Every licensed casino undergoes some level of operational review, and the license provides a legal framework for dispute resolution.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                To verify a license, go directly to the regulatory authority's website&mdash;never rely on the casino's own claims. Here is how to check each major licensing jurisdiction:
+            </p>
+
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Curacao eGaming:</strong> Verify at <code class="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-brand-300">validation.curacao-egaming.com</code> by entering the license number (format: 365/JAZ or 8048/JAZ). New Curacao regulations effective 2024 require individual operator licensing.</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Malta Gaming Authority (MGA):</strong> Search the public register at <code class="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-brand-300">mga.org.mt/public-register</code>. MGA licenses are considered among the most rigorous.</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Isle of Man GSC:</strong> Verify through the Gambling Supervision Commission public directory. Known for strict player fund segregation requirements.</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Gibraltar:</strong> Check with the Gibraltar Gambling Commissioner. Requires operators to hold player funds in separate accounts.</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Kahnawake Gaming Commission:</strong> Verify at <code class="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-brand-300">gamingcommission.ca</code>. One of the oldest online gambling regulators (est. 1999).</span>
+                </li>
+            </ul>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                For players in African markets, particularly Nigeria, <a href="https://btcgamblepro.com" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">BtcGamblePro</a> maintains a regularly updated comparison of which platforms hold valid licenses for West African jurisdictions and how local regulations interact with international licensing.
+            </p>
+
+            <!-- License Comparison Table -->
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-800 text-left">
+                            <th class="px-4 py-3 font-semibold text-gray-200 rounded-tl-lg">License</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">Player Protection</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">RNG Audit Required</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">Dispute Resolution</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200 rounded-tr-lg">Strictness</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">MGA (Malta)</td>
+                            <td class="px-4 py-3 text-green-400">Segregated funds</td>
+                            <td class="px-4 py-3 text-green-400">Yes (annual)</td>
+                            <td class="px-4 py-3 text-green-400">ADR mechanism</td>
+                            <td class="px-4 py-3"><span class="bg-green-900/50 text-green-300 px-2 py-0.5 rounded text-xs font-semibold">Very High</span></td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Gibraltar</td>
+                            <td class="px-4 py-3 text-green-400">Segregated funds</td>
+                            <td class="px-4 py-3 text-green-400">Yes</td>
+                            <td class="px-4 py-3 text-green-400">Commissioner review</td>
+                            <td class="px-4 py-3"><span class="bg-green-900/50 text-green-300 px-2 py-0.5 rounded text-xs font-semibold">Very High</span></td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Isle of Man</td>
+                            <td class="px-4 py-3 text-green-400">Segregated funds</td>
+                            <td class="px-4 py-3 text-green-400">Yes</td>
+                            <td class="px-4 py-3 text-yellow-400">Limited ADR</td>
+                            <td class="px-4 py-3"><span class="bg-green-900/50 text-green-300 px-2 py-0.5 rounded text-xs font-semibold">High</span></td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Kahnawake</td>
+                            <td class="px-4 py-3 text-yellow-400">Basic requirements</td>
+                            <td class="px-4 py-3 text-green-400">Yes</td>
+                            <td class="px-4 py-3 text-yellow-400">Commission review</td>
+                            <td class="px-4 py-3"><span class="bg-yellow-900/50 text-yellow-300 px-2 py-0.5 rounded text-xs font-semibold">Medium</span></td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Curacao</td>
+                            <td class="px-4 py-3 text-yellow-400">Minimal</td>
+                            <td class="px-4 py-3 text-yellow-400">Recommended</td>
+                            <td class="px-4 py-3 text-red-400">Limited</td>
+                            <td class="px-4 py-3"><span class="bg-yellow-900/50 text-yellow-300 px-2 py-0.5 rounded text-xs font-semibold">Low-Medium</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Red flag box -->
+            <div class="bg-red-950/30 border border-red-800/50 rounded-xl p-5">
+                <div class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-red-300 mb-1">License Red Flags</p>
+                        <ul class="text-red-200/80 text-sm space-y-1">
+                            <li>&bull; No license number displayed anywhere on the site</li>
+                            <li>&bull; License number that cannot be verified on the regulator's website</li>
+                            <li>&bull; Claims of "pending" or "in process" licenses</li>
+                            <li>&bull; License displayed as an image only (no verifiable link or number)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Verify Provably Fair -->
+        <section id="step-2" class="mb-12">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="step-number bg-brand-600 text-white">2</div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Verify Provably Fair Implementation</h2>
+                    <p class="text-gray-400 mt-1">Confirm the casino's outcomes are cryptographically verifiable</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Provably fair is the gold standard for crypto casino fairness. It uses a cryptographic commitment scheme that makes it mathematically impossible for the casino to manipulate results after you place a bet. Here is how it works:
+            </p>
+
+            <!-- Provably Fair Flow Diagram -->
+            <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 mb-6">
+                <h3 class="text-lg font-semibold text-white mb-4">The Commitment Scheme</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center text-sm">
+                    <div class="bg-gray-900 rounded-lg p-4 border border-gray-700">
+                        <div class="text-brand-400 font-bold mb-2">1. Commit</div>
+                        <p class="text-gray-400">Casino generates a <strong class="text-white">server seed</strong> and publishes its <strong class="text-brand-300">SHA-256 hash</strong> before you play</p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-4 border border-gray-700">
+                        <div class="text-brand-400 font-bold mb-2">2. Combine</div>
+                        <p class="text-gray-400">Your <strong class="text-white">client seed</strong> + server seed + <strong class="text-white">nonce</strong> are combined to produce the game result</p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-4 border border-gray-700">
+                        <div class="text-brand-400 font-bold mb-2">3. Reveal</div>
+                        <p class="text-gray-400">After the bet, the casino reveals the <strong class="text-white">unhashed server seed</strong></p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-4 border border-gray-700">
+                        <div class="text-brand-400 font-bold mb-2">4. Verify</div>
+                        <p class="text-gray-400">You hash the revealed seed and confirm it matches the <strong class="text-brand-300">original commitment</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                <strong class="text-white">How to verify manually:</strong> Before playing, copy the server seed hash displayed by the casino. After your session, when the server seed is revealed, hash it yourself using SHA-256 and compare. If the hashes match, the casino could not have changed the outcome after seeing your bet.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Different platforms implement provably fair differently. <strong class="text-white">Stake</strong> uses HMAC-SHA256 with the formula <code class="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-brand-300">HMAC_SHA256(server_seed, client_seed:nonce:round)</code>. <strong class="text-white">BC.Game</strong> uses hash chains combined with Bitcoin block hashes as an external entropy source, making the results verifiable against the Bitcoin blockchain itself.
+            </p>
+
+            <!-- Tool callout -->
+            <div class="bg-brand-900/20 border border-brand-700/40 rounded-xl p-5 mb-6">
+                <div class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-brand-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    <div>
+                        <p class="font-semibold text-brand-300 mb-1">Use the Provably Fair Verifier Tool</p>
+                        <p class="text-gray-300 text-sm mb-2">Rather than verifying manually, use our open-source <a href="https://github.com/mkleo2731/provably-fair-verifier" class="text-brand-400 hover:text-brand-300 underline font-semibold transition-colors">provably-fair-verifier</a> to independently verify game outcomes across multiple platforms. It supports Stake, BC.Game, and other major crypto casinos with platform-specific verification algorithms.</p>
+                        <div class="bg-gray-900 rounded-lg p-3 font-mono text-xs text-gray-300">
+                            <span class="text-gray-500">$</span> git clone https://github.com/mkleo2731/provably-fair-verifier.git<br>
+                            <span class="text-gray-500">$</span> cd provably-fair-verifier<br>
+                            <span class="text-gray-500">$</span> npm install && npm run verify -- --platform stake --hash &lt;seed_hash&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed">
+                For players in the Indian market, <a href="https://bitcoinbetpro.com" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">BitcoinBetPro</a> provides localized walkthroughs for verifying provably fair outcomes on platforms popular in India, including step-by-step guides in Hindi for the most common games like crash, dice, and limbo.
+            </p>
+        </section>
+
+        <!-- Step 3: Check RNG Audit Certificates -->
+        <section id="step-3" class="mb-12">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="step-number bg-brand-600 text-white">3</div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Check RNG Audit Certificates</h2>
+                    <p class="text-gray-400 mt-1">Confirm outcomes are verified by independent testing labs</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Even with provably fair, many games (particularly slots from third-party providers) rely on Random Number Generators (RNGs) that should be independently audited. An audit certificate from a recognized testing lab confirms that the RNG produces statistically random, unbiased results.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                The major independent auditors to look for are:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <h4 class="font-semibold text-white mb-1">iTech Labs</h4>
+                    <p class="text-sm text-gray-400">Australia-based. Tests RNG, game mathematics, and live dealer systems. Widely respected in the crypto casino space.</p>
+                </div>
+                <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <h4 class="font-semibold text-white mb-1">GLI (Gaming Laboratories International)</h4>
+                    <p class="text-sm text-gray-400">One of the largest testing labs globally. Their certification is required by many jurisdictions.</p>
+                </div>
+                <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <h4 class="font-semibold text-white mb-1">BMM Testlabs</h4>
+                    <p class="text-sm text-gray-400">Tests RNG, game systems, and platform security. Over 40 years in the industry.</p>
+                </div>
+                <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                    <h4 class="font-semibold text-white mb-1">eCOGRA</h4>
+                    <p class="text-sm text-gray-400">Tests fair gaming, player protection, and responsible conduct. Also provides dispute mediation.</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                <strong class="text-white">Where to find certificates:</strong> Look in the casino's footer for certification logos (they should link to the actual certificate). Also check the Terms and Conditions or a dedicated "Fairness" or "Security" page. The certificate should name the specific operator, the games tested, the date of testing, and the validity period.
+            </p>
+
+            <div class="bg-red-950/30 border border-red-800/50 rounded-xl p-5">
+                <div class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-red-300 mb-1">What a certificate does NOT cover</p>
+                        <p class="text-red-200/80 text-sm">An RNG certificate confirms the random number generation is fair for the tested games at the time of testing. It does not guarantee the casino will pay out, honor bonuses, or treat players fairly in other operational aspects. Always combine RNG verification with the other steps in this guide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Verify RTP Claims -->
+        <section id="step-4" class="mb-12">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="step-number bg-brand-600 text-white">4</div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Verify RTP Claims</h2>
+                    <p class="text-gray-400 mt-1">Cross-check Return to Player percentages against industry standards</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Return to Player (RTP) is the percentage of all wagered money a game returns to players over time. An RTP of 96% means that for every $100 wagered, the game returns $96 on average and the house keeps $4. This is a long-term statistical average&mdash;individual sessions will vary significantly.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Legitimate casinos publish the RTP for each game, typically accessible from the game's info or help menu. Cross-reference these numbers against the game provider's official specs. If a casino claims a higher RTP than the provider's published rate, that is suspicious rather than generous&mdash;it may indicate manipulated game software.
+            </p>
+
+            <!-- RTP Table -->
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-800 text-left">
+                            <th class="px-4 py-3 font-semibold text-gray-200 rounded-tl-lg">Game Type</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">Expected RTP Range</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">House Edge</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200 rounded-tr-lg">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Slots</td>
+                            <td class="px-4 py-3 text-green-400">95% &ndash; 97%</td>
+                            <td class="px-4 py-3 text-gray-300">3% &ndash; 5%</td>
+                            <td class="px-4 py-3 text-gray-400">Varies widely by provider; check each game individually</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Blackjack</td>
+                            <td class="px-4 py-3 text-green-400">99.0% &ndash; 99.5%</td>
+                            <td class="px-4 py-3 text-gray-300">0.5% &ndash; 1.0%</td>
+                            <td class="px-4 py-3 text-gray-400">With optimal strategy; side bets lower RTP significantly</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Roulette (European)</td>
+                            <td class="px-4 py-3 text-green-400">97.3%</td>
+                            <td class="px-4 py-3 text-gray-300">2.7%</td>
+                            <td class="px-4 py-3 text-gray-400">American roulette drops to 94.7% due to double zero</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Crash Games</td>
+                            <td class="px-4 py-3 text-green-400">97% &ndash; 99%</td>
+                            <td class="px-4 py-3 text-gray-300">1% &ndash; 3%</td>
+                            <td class="px-4 py-3 text-gray-400">Usually provably fair; house edge is typically 1%</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Dice</td>
+                            <td class="px-4 py-3 text-green-400">98% &ndash; 99%</td>
+                            <td class="px-4 py-3 text-gray-300">1% &ndash; 2%</td>
+                            <td class="px-4 py-3 text-gray-400">Most crypto dice games are provably fair with ~1% edge</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Baccarat</td>
+                            <td class="px-4 py-3 text-green-400">98.5% &ndash; 98.9%</td>
+                            <td class="px-4 py-3 text-gray-300">1.1% &ndash; 1.5%</td>
+                            <td class="px-4 py-3 text-gray-400">Banker bet has lowest house edge; tie bet much worse</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                For detailed slot RTP data across providers and markets, <a href="https://cryptoslotspro.com" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">CryptoSlotsPro</a> maintains comprehensive RTP databases with Vietnamese-language slot data and cross-platform comparisons. You can also use the <a href="https://coinbetpro.com/en/tools/crypto-profit-calculator" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">crypto profit calculator</a> to model expected returns based on a game's stated RTP and your wagering volume.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed">
+                For sports bettors, odds fairness is equally important. The <a href="https://coinbetpro.com/en/tools/odds-converter" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">odds converter tool</a> helps you compare decimal, fractional, and American odds to calculate implied probabilities&mdash;if the combined implied probability of all outcomes significantly exceeds 100%, the overround (vig) is excessive. Pair this with data from the <a href="https://github.com/mkleo2731/crypto-betting-odds" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">crypto-betting-odds</a> repository for historical odds tracking across crypto sportsbooks.
+            </p>
+        </section>
+
+        <!-- Step 5: Test Withdrawal Process -->
+        <section id="step-5" class="mb-12">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="step-number bg-brand-600 text-white">5</div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Test the Withdrawal Process</h2>
+                    <p class="text-gray-400 mt-1">Verify the platform actually pays out before depositing significant amounts</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                A casino's fairness claims mean nothing if you cannot withdraw your funds. Before depositing any significant amount, make a small test deposit, play a few rounds, and immediately attempt a withdrawal. This tests the full cycle: deposit processing, game functionality, and&mdash;most critically&mdash;payout execution.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Here are the expected withdrawal times for common cryptocurrencies. If a platform consistently takes longer than these ranges without explanation, treat it as a warning sign:
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-800 text-left">
+                            <th class="px-4 py-3 font-semibold text-gray-200 rounded-tl-lg">Cryptocurrency</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">Expected Time</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200">Network</th>
+                            <th class="px-4 py-3 font-semibold text-gray-200 rounded-tr-lg">Typical Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Bitcoin (BTC)</td>
+                            <td class="px-4 py-3 text-gray-300">10 &ndash; 30 minutes</td>
+                            <td class="px-4 py-3 text-gray-400">Bitcoin mainnet</td>
+                            <td class="px-4 py-3 text-gray-400">0.0001 &ndash; 0.0005 BTC</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">USDT (TRC-20)</td>
+                            <td class="px-4 py-3 text-gray-300">2 &ndash; 5 minutes</td>
+                            <td class="px-4 py-3 text-gray-400">Tron</td>
+                            <td class="px-4 py-3 text-gray-400">~1 USDT</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Ethereum (ETH)</td>
+                            <td class="px-4 py-3 text-gray-300">5 &ndash; 15 minutes</td>
+                            <td class="px-4 py-3 text-gray-400">Ethereum mainnet</td>
+                            <td class="px-4 py-3 text-gray-400">Variable (gas fees)</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Litecoin (LTC)</td>
+                            <td class="px-4 py-3 text-gray-300">5 &ndash; 10 minutes</td>
+                            <td class="px-4 py-3 text-gray-400">Litecoin mainnet</td>
+                            <td class="px-4 py-3 text-gray-400">~0.001 LTC</td>
+                        </tr>
+                        <tr class="bg-gray-800/30 hover:bg-gray-800/50 transition-colors">
+                            <td class="px-4 py-3 font-medium text-white">Solana (SOL)</td>
+                            <td class="px-4 py-3 text-gray-300">1 &ndash; 3 minutes</td>
+                            <td class="px-4 py-3 text-gray-400">Solana mainnet</td>
+                            <td class="px-4 py-3 text-gray-400">~0.00025 SOL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                For Brazilian users who prefer fiat off-ramps, <a href="https://btcbettingguide.com" class="text-brand-400 hover:text-brand-300 underline decoration-brand-400/30 hover:decoration-brand-300 transition-colors">BtcBettingGuide</a> covers which crypto casinos support PIX withdrawals (Brazil's instant payment system) and documents real withdrawal test results with timestamps across major platforms in the Brazilian market.
+            </p>
+
+            <div class="bg-red-950/30 border border-red-800/50 rounded-xl p-5">
+                <div class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    <div>
+                        <p class="font-semibold text-red-300 mb-1">Withdrawal Red Flags</p>
+                        <ul class="text-red-200/80 text-sm space-y-1">
+                            <li>&bull; Sudden KYC requirements after you have already deposited</li>
+                            <li>&bull; Withdrawal limits that changed from what was stated when you signed up</li>
+                            <li>&bull; Excessive withdrawal fees not disclosed upfront</li>
+                            <li>&bull; "Processing" status for more than 24 hours without explanation</li>
+                            <li>&bull; Requiring additional wagering before allowing withdrawal of deposited funds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 6: Check Community and Reputation -->
+        <section id="step-6" class="mb-12">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="step-number bg-brand-600 text-white">6</div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Check Community and Reputation</h2>
+                    <p class="text-gray-400 mt-1">Research what real players say about the platform</p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Community feedback is the final sanity check. No amount of technical verification replaces the signal from hundreds of real users over months or years. Platforms that consistently pay out and treat players fairly build reputations that are difficult to fake.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-4">
+                <strong class="text-white">Where to check:</strong>
+            </p>
+
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Reddit</strong> &mdash; Subreddits like r/CryptoCasino, r/gambling, and r/Bitcoin often have threads about specific platforms. Sort by "new" to see recent experiences, not just old promotional posts.</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Bitcointalk.org</strong> &mdash; The Gambling section has detailed threads on most crypto casinos. Long-running threads (100+ pages) are particularly valuable because they show how the platform has behaved over time.</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Trustpilot</strong> &mdash; Check for verified reviews. Be wary of platforms with only 5-star reviews or a sudden influx of positive reviews (potential astroturfing).</span>
+                </li>
+                <li class="flex items-start gap-2 text-gray-300">
+                    <span class="text-brand-400 font-bold mt-0.5">&bull;</span>
+                    <span><strong class="text-white">Platform age</strong> &mdash; How long has the casino been operating? Platforms running for 3+ years with consistent payouts are lower risk. New platforms (under 1 year) carry significantly higher risk regardless of technical claims.</span>
+                </li>
+            </ul>
+
+            <p class="text-gray-300 leading-relaxed">
+                Look for specific patterns: payment delays during high-volume periods, changed terms without notice, confiscated balances citing vague "terms violations," or unresponsive support. A single complaint is noise; a pattern of identical complaints is signal.
+            </p>
+        </section>
+
+        <!-- Red Flags Checklist -->
+        <section id="red-flags" class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Red Flags Checklist</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">
+                If a platform exhibits any of the following, proceed with extreme caution&mdash;or avoid it entirely. Two or more red flags together should be treated as a strong signal to walk away.
+            </p>
+
+            <div class="bg-red-950/20 border border-red-800/40 rounded-xl p-6">
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">No verifiable license.</strong> The site displays no license number, or the number cannot be confirmed on the regulator's website.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Claims "provably fair" without implementation.</strong> The term is used in marketing but no server seed hash, client seed, or verification tool is actually provided.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">No named auditor.</strong> The site says "independently audited" but never names the auditing firm or provides a certificate link.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Unrealistic RTP claims.</strong> Advertising RTPs significantly higher than the game provider's official specifications.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Withdrawal delays exceeding 48 hours.</strong> Crypto withdrawals should complete within hours, not days. Persistent delays suggest liquidity problems.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Post-deposit KYC surprises.</strong> Requiring identity verification only after you have deposited, especially at the point of withdrawal.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">No public ownership or company info.</strong> Legitimate operators disclose their parent company, registration number, and jurisdiction. Anonymous operators are unaccountable.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Copied or cloned website.</strong> The site looks identical to another casino with only the branding changed. White-label scam operations frequently reuse the same template.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Bonus terms with 60x+ wagering requirements.</strong> While not inherently fraudulent, extreme wagering requirements (above 40x) effectively make bonuses impossible to clear, which is a predatory practice.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-400 text-lg mt-0.5">&#10006;</span>
+                        <span class="text-gray-200"><strong class="text-red-300">Closed or censored community channels.</strong> If the casino's Telegram, Discord, or forum actively deletes negative feedback or bans users who report issues.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Conclusion</h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Verifying a crypto casino's fairness is not optional&mdash;it is a prerequisite. The six steps above give you a systematic framework: start with the license, verify the cryptography, check the audits, validate the RTP numbers, test the actual withdrawal process, and confirm the community's experience matches the marketing claims.
+            </p>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                No single step is sufficient on its own. A casino can hold a valid license and still manipulate games. A platform can be provably fair for its original games but host rigged third-party slots. The strength of this checklist is in the combination.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                For automated, independent verification of provably fair games, use the <a href="https://github.com/mkleo2731/provably-fair-verifier" class="text-brand-400 hover:text-brand-300 underline font-semibold transition-colors">provably-fair-verifier</a> tool. It is open source, auditable, and supports the major crypto casino platforms. Contributions and bug reports are welcome via GitHub issues.
+            </p>
+        </section>
+
+        <!-- Responsible Gambling Disclaimer -->
+        <div class="bg-yellow-950/30 border border-yellow-700/40 rounded-xl p-5 mb-10">
+            <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div>
+                    <p class="font-semibold text-yellow-300 mb-1">Responsible Gambling</p>
+                    <p class="text-yellow-200/80 text-sm">Gambling involves risk and should be treated as entertainment, not a source of income. Never wager more than you can afford to lose. If you feel gambling is becoming a problem, seek help at <a href="https://www.begambleaware.org" class="underline text-yellow-300 hover:text-yellow-200">BeGambleAware.org</a> or call the National Problem Gambling Helpline at 1-800-522-4700.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/mkleo2731/provably-fair-verifier" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        provably-fair-verifier
+                    </a>
+                    <a href="https://github.com/mkleo2731/crypto-betting-odds" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        crypto-betting-odds
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    Part of the <a href="https://github.com/mkleo2731/provably-fair-verifier" class="text-gray-400 hover:text-white transition-colors">provably-fair-verifier</a> documentation
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
